@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Kids | حساب جديد</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/global-ui.css">
+</head>
+<body class="auth-page register-page">
+    <main class="auth-layout">
+        <section class="form-side">
+            <div class="form-box">
+                <div class="steps" aria-label="خطوات إنشاء الحساب">
+                    <span class="step active">بيانات الحساب</span>
+                    <span class="step">تأكيد الحساب</span>
+                </div>
+
+                <h1 class="page-title">حساب جديد</h1>
+                <p class="page-description">قم بإدخال معلوماتك لإنشاء حساب في بلوم كيدز</p>
+
+                <form id="registerForm" novalidate>
+                    <div class="field" id="nameField">
+                        <span class="field-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
+                        </span>
+                        <label class="visually-hidden" for="fullName">الاسم بالكامل</label>
+                        <input type="text" id="fullName" name="name" placeholder="اسمك بالكامل" autocomplete="name" aria-describedby="nameError" required>
+                        <small class="field-error" id="nameError">أدخل الاسم بالكامل</small>
+                    </div>
+
+                    <div class="field" id="registerEmailField">
+                        <span class="field-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+                        </span>
+                        <label class="visually-hidden" for="registerEmail">البريد الإلكتروني</label>
+                        <input type="email" id="registerEmail" name="email" placeholder="بريدك الإلكتروني" autocomplete="email" aria-describedby="registerEmailError" required>
+                        <small class="field-error" id="registerEmailError">أدخل بريدًا إلكترونيًا صحيحًا</small>
+                    </div>
+
+                    <div class="phone-row">
+                        <div class="field" id="phoneField">
+                            <span class="field-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a15 15 0 0 0 5 5l2-3 5 2v4c0 1-1 2-2 2C10 21 3 14 3 6c0-1 1-2 2-2Z"></path></svg>
+                            </span>
+                            <label class="visually-hidden" for="phone">رقم الجوال</label>
+                            <input type="tel" id="phone" name="phone" placeholder="رقم الجوال" autocomplete="tel" inputmode="numeric" aria-describedby="phoneError" required>
+                            <small class="field-error" id="phoneError">أدخل رقم جوال صحيحًا</small>
+                        </div>
+
+                        <label class="visually-hidden" for="countryCode">مقدمة الدولة</label>
+                        <select class="country-select" id="countryCode" name="country_code" aria-label="مقدمة الدولة">
+                            <option value="+966">🇸🇦 +966</option>
+                            <option value="+970">🇵🇸 +970</option>
+                            <option value="+20">🇪🇬 +20</option>
+                        </select>
+                    </div>
+
+                    <div class="field" id="registerPasswordField">
+                        <span class="field-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+                        </span>
+                        <label class="visually-hidden" for="registerPassword">كلمة المرور</label>
+                        <input type="password" id="registerPassword" name="password" placeholder="كلمة المرور" autocomplete="new-password" minlength="6" aria-describedby="registerPasswordError" required>
+                        <button class="password-button" type="button" data-password-button="registerPassword" aria-label="إظهار كلمة المرور">
+                            <svg viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.5"></circle></svg>
+                        </button>
+                        <small class="field-error" id="registerPasswordError">كلمة المرور يجب أن تكون 6 أحرف على الأقل</small>
+                    </div>
+
+                    <div class="field" id="confirmPasswordField">
+                        <span class="field-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+                        </span>
+                        <label class="visually-hidden" for="confirmPassword">تأكيد كلمة المرور</label>
+                        <input type="password" id="confirmPassword" name="password_confirmation" placeholder="تأكيد كلمة المرور" autocomplete="new-password" minlength="6" aria-describedby="confirmPasswordError" required>
+                        <button class="password-button" type="button" data-password-button="confirmPassword" aria-label="إظهار تأكيد كلمة المرور">
+                            <svg viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"></path><circle cx="12" cy="12" r="2.5"></circle></svg>
+                        </button>
+                        <small class="field-error" id="confirmPasswordError">كلمتا المرور غير متطابقتين</small>
+                    </div>
+
+                    <button class="main-button" type="submit">تسجيل</button>
+                </form>
+
+                <p class="bottom-text">لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a></p>
+            </div>
+        </section>
+
+        <section class="visual-side" aria-label="بيئة تعليمية تفاعلية للأطفال">
+            <img class="visual-logo" src="images/Group 1171274877.svg" alt="Bloom Kids">
+            <div class="visual-accent-dot" aria-hidden="true"></div>
+            <div class="visual-content">
+                <div class="visual-image-wrap">
+                    <img class="visual-image" src="images/register-learning-photo.png" alt="معلمة وأطفال يتعلمون معًا">
+                    <span class="image-caption">حساب واحد لرحلة تعليمية متكاملة</span>
+                </div>
+                <div class="visual-copy">
+                    <p class="gold-line">ابدأ اليوم</p>
+                    <h2>أنشئ حسابك وابدأ تجربة تعليمية ملهمة</h2>
+                    <p>مسارات واضحة، أنشطة تفاعلية، وتقدم يمكن متابعته بسهولة من أول خطوة.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/register.js"></script>
+
+<a class="global-home-link" href="index.html" aria-label="العودة إلى الصفحة الرئيسية">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path><path d="M9.5 20v-5h5v5"></path></svg>
+  <span>العودة إلى الصفحة الرئيسية</span>
+</a>
+</body>
+</html>

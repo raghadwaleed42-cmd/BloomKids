@@ -1,0 +1,79 @@
+
+/* =========================================================
+   Bloom Kids shared UI utilities
+   Common presentation controls used across all pages.
+   ========================================================= */
+:root {
+  --bk-primary: #0f4c81;
+  --bk-primary-dark: #0b3f6d;
+  --bk-orange: #f6a623;
+  --bk-orange-dark: #e8920d;
+  --bk-toggle-off: #c5cfda;
+}
+
+.global-home-link {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  left: auto;
+  bottom: auto;
+  z-index: 9999;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 16px;
+  border: 1px solid rgba(15, 76, 129, .18);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .96);
+  color: var(--bk-primary);
+  box-shadow: 0 8px 26px rgba(15, 76, 129, .12);
+  font-family: "Cairo", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, color .2s ease;
+}
+.global-home-link svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.global-home-link:hover,
+.global-home-link:focus-visible {
+  color: var(--bk-orange-dark);
+  border-color: rgba(246, 166, 35, .52);
+  box-shadow: 0 10px 30px rgba(15, 76, 129, .16);
+  transform: translateY(-2px);
+}
+.global-home-link:focus-visible { outline: 3px solid rgba(246, 166, 35, .22); outline-offset: 2px; }
+
+/* Unified switch colors: orange = ON, cool gray = OFF. */
+.switch span,
+.switch .slider,
+.parent-switch span,
+.teacher-switch span {
+  background: var(--bk-toggle-off) !important;
+}
+.switch input:checked + span,
+.switch input:checked + .slider,
+.parent-switch input:checked + span,
+.teacher-switch input:checked + span {
+  background: var(--bk-orange) !important;
+}
+.switch input:focus-visible + span,
+.switch input:focus-visible + .slider,
+.parent-switch input:focus-visible + span,
+.teacher-switch input:focus-visible + span {
+  box-shadow: 0 0 0 3px rgba(246, 166, 35, .22) !important;
+}
+
+@media (max-width: 640px) {
+  .global-home-link { top: 10px; right: 10px; left: auto; bottom: auto; min-height: 40px; padding: 0 12px; font-size: 11px; }
+}
+
+/* Keep the fixed Home control in the upper-right of the content area on dashboard pages. */
+@media (min-width: 761px) {
+  body:has(.sidebar) .global-home-link,
+  body:has(.admin-sidebar) .global-home-link {
+    right: 270px;
+  }
+}

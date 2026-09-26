@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bloom Kids | الطرح حتى 10</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="css/student-dashboard.css" rel="stylesheet"/>
+<link href="css/dashboard-sidebar-tweaks.css" rel="stylesheet"/>
+<link href="css/parent-header-uniform.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/global-ui.css">
+</head>
+<body class="lesson-page">
+<div class="dashboard">
+<!-- =========================================
+         SIDEBAR
+    ========================================== -->
+<aside class="sidebar">
+<div class="sidebar-logo">
+<span class="logo-text">
+                Bloom Kids
+            </span>
+<img alt="Bloom Kids Logo" class="logo-image" src="images/bloomkids-logo-mark.png"/>
+</div>
+<nav class="sidebar-nav">
+<a class="nav-item" href="parent-dashboard.html">
+<i class="fa-solid fa-house"></i>
+<span>لوحة التحكم</span>
+</a>
+<a class="nav-item" href="parent-profile.html">
+<i class="fa-regular fa-user"></i>
+<span>الملف الشخصي</span>
+</a>
+<a class="nav-item" href="child-profile.html">
+<i class="fa-regular fa-clipboard"></i>
+<span>الأطفال</span>
+</a>
+<a class="nav-item active" href="subjects.html">
+<i class="fa-solid fa-arrow-trend-up"></i>
+<span>المواد الدراسية</span>
+</a>
+<a class="nav-item" href="bloom-kids-progress-transparent-robot.html">
+<i class="fa-solid fa-chart-column"></i>
+<span>التقارير</span>
+</a>
+<a class="nav-item" href="parent-settings.html">
+<i class="fa-solid fa-gear"></i>
+<span>الإعدادات</span>
+</a>
+<a class="nav-item" href="login.html?role=parent">
+<i class="fa-solid fa-arrow-right-from-bracket"></i>
+<span>تسجيل خروج</span>
+</a>
+</nav>
+</aside>
+<!-- =========================================
+         MAIN
+    ========================================== -->
+<main class="main-content">
+<!-- HEADER -->
+<header class="top-header">
+<div class="welcome-box">
+<h2>
+                    أهلاً بك <span>👋</span>
+</h2>
+<p>
+                    تابع رحلة طفلك التعليمية واكتشف تقدمه اليوم
+                </p>
+</div>
+<div class="header-user">
+<div class="header-user-info">
+<strong>ماهر مراد</strong>
+<span>ولي أمر</span>
+</div>
+<div class="header-avatar">
+<i class="fa-regular fa-user"></i>
+</div>
+<button aria-label="الإشعارات" class="header-notification" type="button">
+<i class="fa-regular fa-bell"></i>
+<span class="notification-dot"></span>
+</button>
+<button aria-label="فتح القائمة" class="header-arrow" type="button">
+<i class="fa-solid fa-chevron-down"></i>
+</button>
+</div>
+</header>
+<!-- =========================================
+             LESSON CONTENT
+        ========================================== -->
+<section class="single-lesson-content">
+<!-- TOP -->
+<div class="single-lesson-heading">
+<div class="single-lesson-title">
+<h1>الطرح حتى 10</h1>
+<p>الرياضيات &lt; الدرس 3</p>
+</div>
+<a class="back-lessons-btn" href="math-lessons.html">
+                    العودة إلى الدروس
+                </a>
+</div>
+<!-- =========================================
+                 MAIN LESSON LAYOUT
+            ========================================== -->
+<div class="single-lesson-layout">
+<!-- ===============================
+                     RIGHT SIDE
+                ================================ -->
+<div class="lesson-main-area">
+<!-- Tabs -->
+<div class="lesson-tabs">
+<button class="lesson-tab active" type="button">
+                            شرح الدرس
+                        </button>
+<button class="lesson-tab" type="button">
+                            أمثلة
+                        </button>
+<button class="lesson-tab" type="button">
+                            ملاحظاتي
+                        </button>
+</div>
+<!-- VIDEO -->
+<div class="lesson-video">
+<button aria-label="تشغيل الفيديو" class="video-play-button" type="button">
+<i class="fa-solid fa-play"></i>
+</button>
+</div>
+</div>
+<!-- ===============================
+                     LEFT SIDE
+                ================================ -->
+<aside class="lesson-side-info">
+<!-- MOTIVATION -->
+<div class="lesson-motivation-card">
+<div class="lesson-motivation-text">
+<h3>
+                                هيا بنا!
+                            </h3>
+<p>الطرح سهل إذا فهمت الفكرة، لنبدأ معًا!</p>
+</div>
+<img alt="Bloom Kids Robot" src="images/student-robot.png"/>
+</div>
+<!-- INSTRUCTIONS -->
+<div class="lesson-info-card">
+<h3>
+                            إرشادات الدرس
+                        </h3>
+<p>
+                            اقرأ الشرح جيدًا
+                        </p>
+<p>
+                            شاهد الأمثلة
+                        </p>
+<p>
+                            حل النشاط
+                        </p>
+</div>
+<!-- LESSON INFORMATION -->
+<div class="lesson-info-card">
+<h3>
+                            معلومات الدرس
+                        </h3>
+<p>
+                            الوقت المتوقع: 15 دقيقة
+                        </p>
+<p>
+                            مستوى الصعوبة: سهل
+                        </p>
+</div>
+</aside>
+</div>
+<!-- =========================================
+                 START ACTIVITY
+            ========================================== -->
+<button class="start-activity" onclick="window.location.href='activity.html'" type="button">
+<span>
+                    ابدأ النشاط
+                </span>
+<i class="fa-regular fa-circle-left"></i>
+</button>
+<!-- =========================================
+                 PREVIOUS / NEXT
+            ========================================== -->
+<div class="lesson-navigation">
+<button class="lesson-navigation-btn" onclick="window.location.href='math-lessons.html'" type="button">
+<span>
+                        الدرس السابق
+                    </span>
+<i class="fa-regular fa-circle-left"></i>
+</button>
+<button class="lesson-navigation-btn" onclick="window.location.href='math-lessons.html'" type="button">
+<i class="fa-regular fa-circle-right"></i>
+<span>
+                        الدرس التالي
+                    </span>
+</button>
+</div>
+</section>
+</main>
+</div>
+<script src="js/student-dashboard.js"></script>
+
+<a class="global-home-link" href="index.html" aria-label="العودة إلى الصفحة الرئيسية">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path><path d="M9.5 20v-5h5v5"></path></svg>
+  <span>العودة إلى الصفحة الرئيسية</span>
+</a>
+</body>
+</html>

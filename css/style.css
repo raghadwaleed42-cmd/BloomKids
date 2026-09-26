@@ -1,0 +1,60 @@
+/* ==========================================
+   إعدادات عامة للموقع
+========================================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* تنسيق الصفحة بالكامل */
+body{
+
+    font-family: "Cairo", sans-serif;
+
+    background-color: #ffffff;
+
+    direction: rtl;
+
+    overflow-x: hidden;
+
+}
+
+/* إزالة الخط من الروابط */
+a{
+
+    text-decoration: none;
+
+}
+
+/* إزالة النقاط من القوائم */
+ul{
+
+    list-style: none;
+
+}
+
+/* جعل الصور متجاوبة */
+img{
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+/* لون النص الأساسي */
+:root{
+
+    --primary-color:#123D73;
+
+    --secondary-color:#EEF4FB;
+
+    --border-color:#DCE7F5;
+
+    --text-color:#5F6F8A;
+
+    --white:#ffffff;
+
+}

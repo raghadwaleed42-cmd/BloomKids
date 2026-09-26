@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloom Kids | لوحة تحكم مدير النظام</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/admin-dashboard.css">
+    <link rel="stylesheet" href="css/global-ui.css">
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <a class="admin-brand" href="admin-dashboard.html" aria-label="Bloom Kids">
+        <img src="images/bloomkids-logo-mark.png" alt="Bloom Kids">
+      </a>
+
+      <nav class="admin-nav" aria-label="قائمة مدير النظام">
+        <a href="admin-dashboard.html" class="admin-nav__item active" aria-current="page">
+          <i class="fa-solid fa-house"></i><span>لوحة التحكم</span>
+        </a>
+        <a href="admin-settings.html" class="admin-nav__item">
+          <i class="fa-solid fa-gear"></i><span>الإعدادات</span>
+        </a>
+        <a href="login.html" class="admin-nav__item admin-nav__logout">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i><span>تسجيل خروج</span>
+        </a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div class="admin-welcome">
+          <h1>أهلاً بك</h1>
+          <p>لوحة مدير النظام</p>
+        </div>
+
+        <div class="admin-user">
+          <button class="admin-user__arrow" type="button" aria-label="فتح قائمة المستخدم">
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="admin-user__info">
+            <strong>يحيى</strong>
+            <span>مدير النظام</span>
+          </div>
+          <div class="admin-user__avatar" aria-hidden="true"></div>
+          <button class="admin-user__bell" type="button" aria-label="التنبيهات">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notification-dot"></span>
+          </button>
+        </div>
+      </header>
+
+      <section class="stats-grid" aria-label="إحصائيات النظام">
+        <article class="stat-card stat-card--orange">
+          <div class="stat-card__icon"><i class="fa-solid fa-people-roof"></i></div>
+          <div class="stat-card__copy"><span>إجمالي أولياء الأمور</span><strong>56</strong></div>
+        </article>
+        <article class="stat-card stat-card--purple">
+          <div class="stat-card__icon"><i class="fa-solid fa-users"></i></div>
+          <div class="stat-card__copy"><span>إجمالي المعلمين</span><strong>354</strong></div>
+        </article>
+        <article class="stat-card stat-card--teal">
+          <div class="stat-card__icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="stat-card__copy"><span>إجمالي الطلاب</span><strong>200</strong></div>
+        </article>
+        <article class="stat-card stat-card--indigo">
+          <div class="stat-card__icon"><i class="fa-regular fa-clipboard"></i></div>
+          <div class="stat-card__copy"><span>التنبيهات</span><strong>17</strong></div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid dashboard-grid--top">
+        <article class="panel panel--users">
+          <h2>توزيع المستخدمين</h2>
+          <div class="donut-area">
+            <div class="donut" aria-label="50% طلاب، 35% معلمون، 15% أولياء أمور">
+              <span class="donut__label donut__label--one">50%</span>
+              <span class="donut__label donut__label--two">35%</span>
+              <span class="donut__label donut__label--three">15%</span>
+            </div>
+            <div class="legend">
+              <span><i class="legend-dot legend-dot--blue"></i>الطلاب</span>
+              <span><i class="legend-dot legend-dot--purple"></i>المعلمون</span>
+              <span><i class="legend-dot legend-dot--pink"></i>أولياء الأمور</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel panel--progress">
+          <h2>نسبة التقدم العامة</h2>
+          <div class="line-chart" role="img" aria-label="مخطط نسبة التقدم العامة">
+            <svg viewBox="0 0 720 245" preserveAspectRatio="none" aria-hidden="true">
+              <g class="chart-grid">
+                <line x1="44" y1="28" x2="700" y2="28"/><line x1="44" y1="82" x2="700" y2="82"/>
+                <line x1="44" y1="136" x2="700" y2="136"/><line x1="44" y1="190" x2="700" y2="190"/>
+                <line x1="44" y1="28" x2="44" y2="190"/><line x1="170" y1="28" x2="170" y2="190"/>
+                <line x1="296" y1="28" x2="296" y2="190"/><line x1="422" y1="28" x2="422" y2="190"/>
+                <line x1="548" y1="28" x2="548" y2="190"/><line x1="674" y1="28" x2="674" y2="190"/>
+              </g>
+              <polyline class="chart-line chart-line--target" points="44,130 170,100 296,76 422,63 548,78 674,58"/>
+              <polyline class="chart-line chart-line--current" points="44,174 170,150 296,132 422,121 548,112 674,96"/>
+              <g class="chart-points chart-points--target">
+                <circle cx="44" cy="130" r="5"/><circle cx="170" cy="100" r="5"/><circle cx="296" cy="76" r="5"/><circle cx="422" cy="63" r="5"/><circle cx="548" cy="78" r="5"/><circle cx="674" cy="58" r="5"/>
+              </g>
+              <g class="chart-points chart-points--current">
+                <circle cx="44" cy="174" r="5"/><circle cx="170" cy="150" r="5"/><circle cx="296" cy="132" r="5"/><circle cx="422" cy="121" r="5"/><circle cx="548" cy="112" r="5"/><circle cx="674" cy="96" r="5"/>
+              </g>
+              <g class="axis-labels">
+                <text x="22" y="34">60</text><text x="22" y="88">20</text><text x="18" y="142">-20</text><text x="18" y="196">-60</text>
+                <text x="44" y="222">صفر</text><text x="170" y="222">شوال</text><text x="296" y="222">ربيع أول</text><text x="422" y="222">ربيع ثاني</text><text x="548" y="222">جمادى أول</text><text x="674" y="222">جمادى ثاني</text>
+              </g>
+            </svg>
+          </div>
+          <div class="legend legend--line">
+            <span><i class="legend-dot legend-dot--pink"></i>المستوى المستهدف</span>
+            <span><i class="legend-dot legend-dot--purple"></i>المستوى الحالي</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid dashboard-grid--bottom">
+        <article class="panel panel--activity">
+          <h2>آخر الأنشطة الإدارية</h2>
+          <div class="activity-table-wrap">
+            <table class="activity-table">
+              <thead><tr><th>#</th><th>النشاط</th><th>تاريخ النشاط</th><th>خيارات</th></tr></thead>
+              <tbody>
+                <tr><td>01</td><td>تم إضافة معلم<br>جديد</td><td>29-شوال-1446<br><span>10:00 م</span></td><td><button type="button" class="more-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button></td></tr>
+                <tr><td>02</td><td>تم إضافة درس<br>جديد</td><td>29-شوال-1446<br><span>10:00 م</span></td><td><button type="button" class="more-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button></td></tr>
+                <tr><td>03</td><td>تم تسجيل ولي<br>أمر جديد</td><td>29-شوال-1446<br><span>10:00 م</span></td><td><button type="button" class="more-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="panel panel--performance">
+          <h2>أداء النظام</h2>
+          <div class="donut-area">
+            <div class="donut" aria-label="أداء النظام"></div>
+            <div class="legend">
+              <span><i class="legend-dot legend-dot--blue"></i>أداء ممتاز</span>
+              <span><i class="legend-dot legend-dot--purple"></i>أداء جيد</span>
+              <span><i class="legend-dot legend-dot--pink"></i>يحتاج تحسين</span>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+<a class="global-home-link" href="index.html" aria-label="العودة إلى الصفحة الرئيسية">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path><path d="M9.5 20v-5h5v5"></path></svg>
+  <span>العودة إلى الصفحة الرئيسية</span>
+</a>
+</body>
+</html>

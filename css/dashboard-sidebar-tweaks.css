@@ -1,0 +1,254 @@
+/* =========================================================
+   Bloom Kids — shared dashboard consistency refinements
+   Visual-only normalization for internal dashboard pages.
+   Keeps each role/page content, links, and active state intact.
+   ========================================================= */
+
+/* ---------- Sidebar shell ---------- */
+.sidebar {
+    width: 250px !important;
+    min-width: 250px !important;
+    min-height: 100vh;
+    padding: 28px 22px !important;
+    background: #ffffff !important;
+    border-left: 1px solid #edf2f8 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+}
+
+/* ---------- Brand / logo ---------- */
+.sidebar .logo-text,
+.sidebar .brand > span {
+    display: none !important;
+}
+
+.sidebar .sidebar-logo,
+.sidebar .logo-container,
+.sidebar .brand {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.sidebar .logo-image,
+.sidebar .brand-logo {
+    width: 92px !important;
+    height: 82px !important;
+    max-width: 92px !important;
+    max-height: 82px !important;
+    flex: 0 0 auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto 32px !important;
+}
+
+/* ---------- Navigation ---------- */
+.sidebar .sidebar-nav,
+.sidebar .menu {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    margin: 0 !important;
+    direction: rtl !important;
+}
+
+.sidebar .nav-item,
+.sidebar .menu-item {
+    width: 100% !important;
+    min-height: 52px !important;
+    height: 52px !important;
+    padding: 0 18px !important;
+    border-radius: 14px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    direction: rtl !important;
+    text-align: right !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    color: #214c86;
+}
+
+/* Icon is always on the RIGHT, immediately beside the label. */
+.sidebar .nav-item > i,
+.sidebar .nav-item > .nav-icon,
+.sidebar .menu-item > i,
+.sidebar .menu-item > svg {
+    order: -1 !important;
+    width: 22px !important;
+    min-width: 22px !important;
+    height: 22px !important;
+    flex: 0 0 22px !important;
+    margin: 0 !important;
+    text-align: center !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+}
+
+.sidebar .menu-item > svg {
+    stroke-width: 1.8 !important;
+}
+
+.sidebar .nav-item > .nav-icon {
+    display: inline-grid !important;
+    place-items: center !important;
+}
+
+.sidebar .nav-item > .nav-icon i {
+    margin: 0 !important;
+    font-size: 20px !important;
+}
+
+.sidebar .nav-item > span:not(.nav-icon),
+.sidebar .menu-item > span {
+    order: 0 !important;
+    flex: 0 1 auto !important;
+    margin: 0 !important;
+}
+
+.sidebar .nav-item:hover:not(.active):not(.disabled),
+.sidebar .menu-item:hover:not(.active):not(.disabled) {
+    background: #edf5ff !important;
+}
+
+.sidebar .nav-item.active,
+.sidebar .menu-item.active {
+    background: #163d73 !important;
+    color: #ffffff !important;
+}
+
+.sidebar .nav-item.active i,
+.sidebar .menu-item.active i,
+.sidebar .menu-item.active svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
+.sidebar .nav-item.disabled,
+.sidebar .menu-item.disabled {
+    opacity: .55 !important;
+    pointer-events: none !important;
+}
+
+/* ---------- Top header ---------- */
+.top-header,
+.topbar {
+    width: 100% !important;
+    height: 84px !important;
+    min-height: 84px !important;
+    padding: 14px 28px !important;
+    border-radius: 22px !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 18px rgba(22, 61, 115, .05) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 20px !important;
+}
+
+/* The progress/reports page had a slightly different header vocabulary. */
+.topbar .welcome,
+.topbar .welcome-box {
+    text-align: right !important;
+    min-width: 0 !important;
+}
+
+.topbar .welcome h1,
+.topbar .welcome-box h1,
+.topbar .welcome-box h2 {
+    margin: 0 !important;
+    color: #163d73 !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    line-height: 1.45 !important;
+}
+
+.topbar .welcome p,
+.topbar .welcome-box p {
+    margin: 2px 0 0 !important;
+    color: #5a7ba5 !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+}
+
+.topbar .profile-wrap,
+.topbar .header-user,
+.top-header .header-user,
+.top-header .user-box {
+    display: flex !important;
+    align-items: center !important;
+    gap: 11px !important;
+}
+
+.topbar .profile-text strong {
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    color: #214c86 !important;
+}
+
+.topbar .profile-text span {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #93a3b8 !important;
+}
+
+/* Match the reports page content inset to the other parent dashboard pages. */
+.app > .main {
+    padding: 24px !important;
+}
+
+/* ---------- Responsive: preserve the existing responsive behavior ---------- */
+@media (max-width: 900px) {
+    .sidebar .logo-image,
+    .sidebar .brand-logo {
+        width: 74px !important;
+        height: 70px !important;
+        margin-bottom: 22px !important;
+    }
+
+    .sidebar .nav-item,
+    .sidebar .menu-item {
+        gap: 8px !important;
+        font-size: 14px !important;
+    }
+
+    .top-header,
+    .topbar {
+        height: auto !important;
+        min-height: 84px !important;
+        padding: 14px !important;
+    }
+}
+
+/* Active sidebar items must not turn white when hovered or focused. */
+.sidebar .nav-item.active:hover,
+.sidebar .nav-item.active:focus,
+.sidebar .nav-item.active:focus-visible,
+.sidebar .menu-item.active:hover,
+.sidebar .menu-item.active:focus,
+.sidebar .menu-item.active:focus-visible {
+    background: #163d73 !important;
+    color: #ffffff !important;
+}
+
+.sidebar .nav-item.active:hover i,
+.sidebar .nav-item.active:focus i,
+.sidebar .nav-item.active:focus-visible i,
+.sidebar .menu-item.active:hover i,
+.sidebar .menu-item.active:focus i,
+.sidebar .menu-item.active:focus-visible i {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+}

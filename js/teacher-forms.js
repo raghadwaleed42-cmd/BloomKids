@@ -1,0 +1,2 @@
+document.querySelectorAll('[data-teacher-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const toast=document.getElementById('teacherFormToast');toast.classList.add('show');setTimeout(()=>window.location.href='teacher-content.html',750);}));
+if(new URLSearchParams(location.search).get('mode')==='edit'){const h=document.querySelector('.teacher-form-head h1');if(h)h.textContent='تعديل الدرس';const b=document.querySelector('.teacher-form-submit');if(b)b.textContent='حفظ التعديلات';}

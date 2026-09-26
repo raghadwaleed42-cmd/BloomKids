@@ -1,0 +1,333 @@
+.admin-main--settings{
+  padding-bottom:44px;
+}
+
+.settings-intro{
+  text-align:right;
+  padding:20px 18px 14px;
+}
+
+.settings-intro h1{
+  font-size:25px;
+  font-weight:800;
+  color:#173d66;
+  margin-bottom:6px;
+}
+
+.settings-intro p{
+  font-size:14px;
+  color:#7f94ae;
+  font-weight:600;
+}
+
+.settings-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  max-width:1000px;
+  margin:0 auto;
+}
+
+.settings-card{
+  position:relative;
+  background:#fff;
+  border-radius:15px;
+  padding:22px 24px 20px;
+  min-height:310px;
+  box-shadow:0 4px 14px rgba(22,61,115,.035);
+  display:flex;
+  flex-direction:column;
+}
+
+/* الأيقونة + عنوان الكارد: مجموعة واحدة على يمين الكارد */
+.settings-card__head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  margin-bottom:19px;
+}
+
+.settings-card__title{
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  gap:10px;
+  width:100%;
+  direction:rtl;
+  text-align:right;
+}
+
+.settings-card__title > i{
+  color:#2d68a2;
+  font-size:20px;
+  width:24px;
+  min-width:24px;
+  text-align:center;
+  margin-top:3px;
+}
+
+.settings-card__title > div{
+  min-width:0;
+}
+
+.settings-card__head h2{
+  font-size:18px;
+  line-height:1.45;
+  font-weight:800;
+  color:#294c70;
+  margin:0;
+}
+
+.settings-card__head p{
+  font-size:12px;
+  line-height:1.65;
+  color:#8797aa;
+  font-weight:500;
+  margin-top:3px;
+}
+
+.logo-preview{
+  width:176px;
+  height:102px;
+  border:1px solid #d7dce3;
+  margin:0 auto 10px;
+  display:grid;
+  place-items:center;
+  background:#fff;
+  overflow:hidden;
+}
+
+.logo-preview img{
+  max-width:118px;
+  max-height:88px;
+  object-fit:contain;
+}
+
+.logo-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.btn,.manage-btn{
+  height:38px;
+  border-radius:7px;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  font-size:13px;
+  font-weight:700;
+}
+
+.btn--primary{
+  background:#0f4c81;
+  color:#fff;
+  border:1px solid #0f4c81;
+}
+
+.btn--secondary{
+  background:#fff;
+  color:#294c70;
+  border:1px solid #cfd8e3;
+}
+
+.upload-notes{
+  list-style-position:inside;
+  font-size:11px;
+  color:#77879a;
+  line-height:1.8;
+  margin:9px 0 8px;
+  padding:0;
+}
+
+.save-btn{
+  align-self:flex-start;
+  margin-top:auto;
+  min-height:32px;
+  padding:0 13px;
+  border:0;
+  border-radius:7px;
+  background:#0f4c81;
+  color:#fff;
+  font-size:11px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.save-btn:hover,.btn--primary:hover{
+  background:#0a3b68;
+}
+
+.field-label{
+  font-size:13px;
+  font-weight:700;
+  color:#40566f;
+  margin:0 0 6px;
+}
+
+.select-wrap{
+  position:relative;
+  margin-bottom:13px;
+}
+
+.select-wrap select{
+  width:100%;
+  height:38px;
+  border:1px solid #cdd7e2;
+  border-radius:7px;
+  background:#fff;
+  padding:0 12px;
+  color:#40566f;
+  font-size:12px;
+  font-weight:500;
+  appearance:none;
+  outline:none;
+}
+
+.select-wrap>i{
+  position:absolute;
+  left:12px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:11px;
+  color:#40566f;
+  pointer-events:none;
+}
+
+.format-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.format-row .select-wrap{
+  margin-bottom:8px;
+}
+
+.setting-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  min-height:42px;
+  color:#344b64;
+  font-size:13px;
+  font-weight:600;
+}
+
+.switch{
+  position:relative;
+  width:35px;
+  height:18px;
+  flex:0 0 35px;
+}
+
+.switch input{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+
+.switch span{
+  position:absolute;
+  inset:0;
+  border-radius:999px;
+  background:#a5a8b4;
+  transition:.2s;
+}
+
+.switch span::after{
+  content:"";
+  position:absolute;
+  top:3px;
+  left:3px;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#fff;
+  transition:.2s;
+  box-shadow:0 1px 2px rgba(0,0,0,.12);
+}
+
+.switch input:checked+span{
+  background:#25aaa1;
+}
+
+.switch input:checked+span::after{
+  transform:translateX(17px);
+}
+
+.manage-btn{
+  margin-top:10px;
+  background:#fff;
+  border:1px solid #cfd8e3;
+  color:#40566f;
+  width:176px;
+  align-self:flex-start;
+}
+
+.session-row{
+  justify-content:space-between;
+  align-items:center;
+}
+
+.session-row strong{
+  font-size:11px;
+  color:#168e87;
+  background:#e3f5f2;
+  padding:4px 8px;
+  border-radius:5px;
+}
+
+.settings-toast{
+  position:fixed;
+  bottom:24px;
+  left:24px;
+  background:#0f4c81;
+  color:#fff;
+  padding:10px 16px;
+  border-radius:10px;
+  font-size:12px;
+  font-weight:700;
+  box-shadow:0 8px 24px rgba(13,65,111,.2);
+  opacity:0;
+  transform:translateY(12px);
+  pointer-events:none;
+  transition:.25s;
+}
+
+.settings-toast.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+@media(max-width:1050px){
+  .settings-grid{grid-template-columns:1fr}
+  .settings-card{min-height:300px;max-width:700px;width:100%;margin:auto}
+}
+
+@media(max-width:600px){
+  .settings-intro{padding-inline:4px}
+  .settings-grid{gap:12px}
+  .settings-card{padding:17px}
+  .format-row{grid-template-columns:1fr}
+  .logo-actions{grid-template-columns:1fr}
+}
+
+
+/* ===== Typography harmonization with the rest of Bloom Kids ===== */
+.admin-main--settings,
+.admin-main--settings button,
+.admin-main--settings select,
+.admin-main--settings input { font-family:"Cairo", Arial, sans-serif; }
+.settings-intro h1 { font-size:28px; }
+.settings-intro p { font-size:15px; line-height:1.8; }
+.settings-card__head h2 { font-size:20px; }
+.settings-card__head p { font-size:13px; line-height:1.75; }
+.field-label { font-size:14px; }
+.select-wrap select { height:42px; font-size:13.5px; }
+.setting-row { min-height:48px; font-size:14px; }
+.btn,.manage-btn { min-height:41px; font-size:14px; }
+.save-btn { min-height:36px; font-size:12.5px; padding-inline:15px; }
+.upload-notes { font-size:12px; }
+.session-row strong { font-size:12px; }

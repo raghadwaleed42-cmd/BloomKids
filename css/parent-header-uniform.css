@@ -1,0 +1,359 @@
+/* ==========================================================
+   Bloom Kids - Parent dashboard header consistency
+   Visual-only normalization for parent-facing pages.
+   Reference layout: child-profile header.
+   ========================================================== */
+
+/* Same card dimensions across all parent pages */
+.top-header,
+.topbar.top-header {
+    width: 100% !important;
+    height: 84px !important;
+    min-height: 84px !important;
+    margin-bottom: 22px !important;
+    padding: 14px 28px !important;
+    border-radius: 22px !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 18px rgba(22, 61, 115, 0.05) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 20px !important;
+    direction: rtl !important;
+}
+
+/* Welcome area always stays on the right */
+.top-header .welcome-box,
+.topbar.top-header .welcome,
+.topbar.top-header .welcome-box {
+    text-align: right !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+}
+
+.top-header .welcome-box h1,
+.top-header .welcome-box h2,
+.topbar.top-header .welcome h1,
+.topbar.top-header .welcome-box h1,
+.topbar.top-header .welcome-box h2 {
+    margin: 0 !important;
+    color: #163d73 !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    line-height: 1.45 !important;
+}
+
+.top-header .welcome-box p,
+.topbar.top-header .welcome p,
+.topbar.top-header .welcome-box p {
+    margin: 2px 0 0 !important;
+    color: #5a7ba5 !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+}
+
+/* User cluster always stays on the LEFT side of the top bar.
+   RTL + explicit order gives the requested visual order:
+   [name] [avatar] [bell] [chevron]  (left -> right) */
+.top-header .header-user,
+.top-header .user-box,
+.topbar.top-header .profile-wrap,
+.topbar.top-header .header-user {
+    flex: 0 0 auto !important;
+    min-width: 224px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 11px !important;
+    direction: rtl !important;
+    position: relative !important;
+}
+
+/* Order 1 = far right in an RTL flex row */
+.top-header .header-arrow,
+.top-header .dropdown-button,
+.top-header .dropdown-icon {
+    order: 1 !important;
+}
+
+.top-header .header-notification,
+.top-header .notification-button,
+.top-header .notification-icon {
+    order: 2 !important;
+}
+
+.top-header .header-avatar,
+.top-header .small-avatar,
+.top-header .user-icon {
+    order: 3 !important;
+}
+
+.top-header .header-user-info,
+.top-header .user-info {
+    order: 4 !important;
+}
+
+/* Name and role */
+.top-header .header-user-info,
+.top-header .user-info,
+.topbar.top-header .profile-text {
+    min-width: 86px !important;
+    text-align: right !important;
+    line-height: 1.3 !important;
+    white-space: nowrap !important;
+}
+
+.top-header .header-user-info strong,
+.top-header .user-info strong,
+.topbar.top-header .profile-text strong {
+    display: block !important;
+    margin: 0 0 2px !important;
+    color: #174c75 !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+}
+
+.top-header .header-user-info span,
+.top-header .user-info span,
+.topbar.top-header .profile-text span {
+    display: block !important;
+    color: #93a3b8 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+}
+
+/* Avatar */
+.top-header .header-avatar,
+.top-header .small-avatar,
+.top-header .user-icon,
+.topbar.top-header .avatar-button {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    background: #e9eef5 !important;
+    color: #174c75 !important;
+    display: grid !important;
+    place-items: center !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+}
+
+.top-header .header-avatar i,
+.top-header .small-avatar i,
+.top-header .user-icon i {
+    font-size: 18px !important;
+    color: #174c75 !important;
+}
+
+/* Notification button */
+.top-header .header-notification,
+.top-header .notification-button,
+.top-header .notification-icon,
+.topbar.top-header .bell-box {
+    position: relative !important;
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    min-height: 46px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 14px !important;
+    background: #fff9f0 !important;
+    color: #f59e0b !important;
+    display: grid !important;
+    place-items: center !important;
+    box-shadow: none !important;
+}
+
+.top-header .header-notification i,
+.top-header .notification-button i,
+.top-header .notification-icon i {
+    font-size: 19px !important;
+    color: #f59e0b !important;
+}
+
+/* Same red notification dot even on pages that did not include one in HTML */
+.top-header .notification-icon::after,
+.topbar.top-header .bell-box::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 8px !important;
+    right: 9px !important;
+    width: 7px !important;
+    height: 7px !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 50% !important;
+    background: #ef4444 !important;
+}
+
+.top-header .notification-dot {
+    position: absolute !important;
+    top: 6px !important;
+    right: 7px !important;
+    width: 8px !important;
+    height: 8px !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 50% !important;
+    background: #ef4444 !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+}
+
+/* Chevron */
+.top-header .header-arrow,
+.top-header .dropdown-button,
+.top-header .dropdown-icon {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: #174c75 !important;
+    display: grid !important;
+    place-items: center !important;
+    font-size: 16px !important;
+    box-shadow: none !important;
+}
+
+/* Progress/reports page: normalize its custom account markup visually
+   without changing its dropdown JS/HTML structure. */
+.topbar.top-header .profile-wrap {
+    padding-right: 34px !important; /* room for the visual chevron */
+}
+
+.topbar.top-header .profile-wrap::before {
+    content: "\f078" !important;
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 28px !important;
+    height: 34px !important;
+    color: #174c75 !important;
+    display: grid !important;
+    place-items: center !important;
+    font-size: 15px !important;
+    pointer-events: none !important;
+}
+
+.topbar.top-header .profile-menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 11px !important;
+    direction: rtl !important;
+}
+
+.topbar.top-header .profile-menu .bell-box {
+    order: 2 !important;
+}
+
+.topbar.top-header .profile-menu .avatar-button {
+    order: 3 !important;
+}
+
+.topbar.top-header .profile-menu .profile-text {
+    order: 4 !important;
+}
+
+.topbar.top-header .avatar-button .avatar {
+    width: 42px !important;
+    height: 42px !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    background: #e9eef5 !important;
+    box-shadow: none !important;
+}
+
+.topbar.top-header .avatar-button .avatar svg {
+    width: 23px !important;
+    height: 23px !important;
+    stroke: #174c75 !important;
+}
+
+.topbar.top-header .avatar-caret {
+    display: none !important;
+}
+
+.topbar.top-header .bell-box svg {
+    width: 20px !important;
+    height: 20px !important;
+    stroke: #f59e0b !important;
+}
+
+/* Keep dropdown attached to the user area */
+.topbar.top-header .profile-dropdown {
+    left: 0 !important;
+    right: auto !important;
+}
+
+/* Responsive behavior stays compact and consistent */
+@media (max-width: 900px) {
+    .top-header,
+    .topbar.top-header {
+        height: auto !important;
+        min-height: 84px !important;
+        padding: 14px 18px !important;
+    }
+
+    .top-header .header-user,
+    .top-header .user-box,
+    .topbar.top-header .profile-wrap {
+        min-width: auto !important;
+    }
+}
+
+@media (max-width: 620px) {
+    .top-header,
+    .topbar.top-header {
+        min-height: 76px !important;
+        gap: 12px !important;
+    }
+
+    .top-header .header-user-info,
+    .top-header .user-info,
+    .topbar.top-header .profile-text,
+    .top-header .header-arrow,
+    .top-header .dropdown-button,
+    .top-header .dropdown-icon,
+    .topbar.top-header .profile-wrap::before {
+        display: none !important;
+    }
+
+    .topbar.top-header .profile-wrap {
+        padding-right: 0 !important;
+    }
+}
+
+
+/* Final parent account-control normalization: subjects + reports use the exact same
+   avatar, notification and chevron treatment as parent-profile. */
+.top-header .header-user > .profile-dropdown {
+    position: absolute !important;
+    top: calc(100% + 10px) !important;
+    left: 0 !important;
+    right: auto !important;
+    z-index: 1000 !important;
+}
+
+.top-header .small-avatar .fa-user {
+    font-size: 18px !important;
+    font-weight: 900 !important;
+}
+
+.top-header .notification-button .fa-bell {
+    font-size: 19px !important;
+}

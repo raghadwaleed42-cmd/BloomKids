@@ -1,0 +1,402 @@
+@media (max-width: 1000px) {
+    .navbar {
+        gap: 20px;
+        padding-inline: 24px;
+    }
+
+    .nav-links {
+        gap: 24px;
+    }
+
+    .nav-links a,
+    .login-link {
+        font-size: 15px;
+    }
+
+    .hero-inner {
+        grid-template-columns: 46% 54%;
+        gap: 10px;
+    }
+
+    .hero-content {
+        padding-right: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-picture img {
+        right: -6px;
+        width: 405px;
+        height: 535px;
+    }
+
+    .student-shape {
+        right: 24px;
+        width: 325px;
+        height: 400px;
+    }
+
+    .demo-box {
+        max-width: 95%;
+    }
+
+    .contact-strip {
+        padding: 38px 34px;
+    }
+
+    .contact-strip h2 {
+        font-size: 23px;
+    }
+
+    .growth-section {
+        padding: 55px 35px;
+    }
+
+    .growth-visual {
+        transform: scale(0.82);
+    }
+
+    .footer-content {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 760px) {
+    .section-container,
+    .navbar,
+    .hero-inner {
+        max-width: calc(100% - 30px);
+    }
+
+    .site-header {
+        top: 14px;
+    }
+
+    .navbar {
+        position: relative;
+        height: 70px;
+        justify-content: space-between;
+        padding: 0 14px 0 18px;
+        border-radius: 16px;
+    }
+
+    .home-logo {
+        width: 56px;
+        height: 56px;
+        flex-basis: 56px;
+    }
+
+    .home-logo img {
+        width: 54px;
+        height: 54px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-content {
+        position: absolute;
+        top: 78px;
+        right: 0;
+        left: 0;
+        display: none;
+        justify-content: flex-start;
+        padding: 22px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: var(--white);
+        box-shadow: 0 12px 28px rgba(24, 68, 94, 0.16);
+    }
+
+    .nav-content.show,
+    .nav-links,
+    .nav-actions {
+        display: flex;
+    }
+
+    .nav-content.show,
+    .nav-links,
+    .nav-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-links,
+    .nav-actions {
+        gap: 0;
+    }
+
+    .nav-links {
+        position: static;
+        transform: none;
+    }
+
+    .nav-links a,
+    .login-link {
+        display: block;
+        padding: 10px 4px;
+        text-align: center;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .nav-actions {
+        margin-top: 8px;
+        margin-inline-start: 0;
+    }
+
+    .register-link {
+        width: 100%;
+    }
+
+    .hero {
+        min-height: 940px;
+        padding: 118px 0 125px;
+    }
+
+    .hero-lines {
+        top: 440px;
+        left: 50%;
+        width: 560px;
+        height: 400px;
+        transform: translateX(-50%) rotate(-8deg);
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .hero-content {
+        grid-row: 1;
+        padding: 12px 0 0;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 15px;
+    }
+
+    .primary-button {
+        width: 230px;
+        margin: auto;
+    }
+
+    .hero-picture {
+        min-height: 455px;
+        margin-top: 5px;
+    }
+
+    .student-shape {
+        right: 50%;
+        bottom: -34px;
+        width: 300px;
+        height: 380px;
+        transform: translateX(50%);
+    }
+
+    .hero-picture img {
+        right: 50%;
+        bottom: -78px;
+        width: 355px;
+        height: 485px;
+        transform: translateX(50%);
+    }
+
+    .section-title {
+        font-size: 31px;
+    }
+
+    .how-section {
+        padding-top: 85px;
+        padding-bottom: 95px;
+    }
+
+    .how-section .section-title,
+    .features-section .section-title {
+        margin-bottom: 55px;
+        text-align: center;
+    }
+
+    .how-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .demo-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .demo-page {
+        height: 245px;
+    }
+
+    .demo-sidebar {
+        width: 70px;
+    }
+
+    .demo-sidebar img {
+        width: 50px;
+    }
+
+    .demo-sidebar i {
+        width: 42px;
+    }
+
+    .demo-main {
+        padding: 22px 14px;
+    }
+
+    .demo-cards {
+        gap: 7px;
+    }
+
+    .demo-cards span {
+        height: 77px;
+    }
+
+    .demo-lines {
+        gap: 8px;
+        margin-top: 34px;
+    }
+
+    .demo-lines i {
+        width: 45px;
+    }
+
+    .play-button {
+        width: 54px;
+        height: 54px;
+    }
+
+    .steps-list {
+        gap: 20px;
+        padding-right: 0;
+    }
+
+    .steps-list li {
+        justify-content: flex-start;
+    }
+
+    .features-section {
+        padding-bottom: 95px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 56px;
+    }
+
+    .feature-card {
+        min-height: 175px;
+    }
+
+    .small-button {
+        margin-left: auto;
+    }
+
+    .contact-strip {
+        grid-template-columns: 1fr;
+        gap: 26px;
+        margin-bottom: 90px;
+        padding: 38px 20px;
+        text-align: center;
+    }
+
+    .contact-button {
+        margin: auto;
+    }
+
+    .growth-section {
+        grid-template-columns: 1fr;
+        min-height: 815px;
+        padding: 45px 22px;
+        text-align: center;
+    }
+
+    .growth-text h2 {
+        font-size: 30px;
+    }
+
+    .growth-text p {
+        margin: auto;
+        font-size: 14px;
+    }
+
+    .growth-visual {
+        width: 400px;
+        max-width: 100%;
+        height: 400px;
+        transform: scale(0.78);
+    }
+
+    .before-footer-space {
+        height: 270px;
+    }
+
+    .site-footer {
+        min-height: auto;
+        padding-top: 55px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        text-align: center;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-contact {
+        align-items: center;
+    }
+
+    .footer-brand,
+    .footer-about p {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .copyright {
+        margin-top: 65px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-content h1 {
+        font-size: 31px;
+    }
+
+    .demo-caption span,
+    .demo-caption strong {
+        font-size: 12px;
+    }
+
+    .step-number {
+        width: 59px;
+        height: 59px;
+    }
+
+    .steps-list h3 {
+        font-size: 16px;
+    }
+
+    .growth-visual {
+        right: 50%;
+        width: 470px;
+        max-width: none;
+        transform: translateX(50%) scale(0.65);
+    }
+}

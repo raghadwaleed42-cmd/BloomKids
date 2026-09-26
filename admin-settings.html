@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloom Kids | إعدادات مدير النظام</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/admin-dashboard.css">
+  <link rel="stylesheet" href="css/admin-settings.css">
+    <link rel="stylesheet" href="css/global-ui.css">
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <a class="admin-brand" href="admin-dashboard.html" aria-label="Bloom Kids">
+        <img src="images/bloomkids-logo-mark.png" alt="Bloom Kids">
+      </a>
+      <nav class="admin-nav" aria-label="قائمة مدير النظام">
+        <a href="admin-dashboard.html" class="admin-nav__item"><i class="fa-solid fa-house"></i><span>لوحة التحكم</span></a>
+        <a href="admin-settings.html" class="admin-nav__item active" aria-current="page"><i class="fa-solid fa-gear"></i><span>الإعدادات</span></a>
+        <a href="login.html" class="admin-nav__item admin-nav__logout"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>تسجيل خروج</span></a>
+      </nav>
+    </aside>
+
+    <main class="admin-main admin-main--settings">
+      <header class="admin-topbar">
+        <div class="admin-welcome"><h1>أهلاً بك</h1><p>إعدادات مدير النظام</p></div>
+        <div class="admin-user">
+          <button class="admin-user__arrow" type="button" aria-label="فتح قائمة المستخدم"><i class="fa-solid fa-chevron-down"></i></button>
+          <div class="admin-user__info"><strong>يحيى</strong><span>مدير النظام</span></div>
+          <div class="admin-user__avatar" aria-hidden="true"></div>
+          <button class="admin-user__bell" type="button" aria-label="التنبيهات"><i class="fa-regular fa-bell"></i><span class="notification-dot"></span></button>
+        </div>
+      </header>
+
+      <section class="settings-intro">
+        <h1>إعدادات المنصة</h1>
+        <p>إدارة إعدادات المنصة وتخصيصها حسب احتياج المؤسسة التعليمية</p>
+      </section>
+
+      <section class="settings-grid">
+        <article class="settings-card identity-card">
+          <header class="settings-card__head"><div class="settings-card__title"><i class="fa-regular fa-image" aria-hidden="true"></i><div><h2>الهوية والشعار</h2><p>تخصيص هوية المنصة والشعار</p></div></div></header>
+          <div class="logo-preview"><img id="adminLogoPreview" src="images/bloomkids-logo-mark.png" alt="شعار Bloom Kids"></div>
+          <div class="logo-actions">
+            <label class="btn btn--primary" for="adminLogoInput">تعديل الشعار</label>
+            <button class="btn btn--secondary" type="button" id="removeAdminLogo">إزالة الشعار</button>
+            <input id="adminLogoInput" type="file" accept="image/png,image/jpeg" hidden>
+          </div>
+          <ul class="upload-notes"><li>يفضل رفع صورة بصيغة PNG / JPG</li><li>الحجم المقترح 512×512 بكسل للحصول على أفضل نتيجة</li></ul>
+          <button class="save-btn" type="button">حفظ التغييرات</button>
+        </article>
+
+        <article class="settings-card locale-card">
+          <header class="settings-card__head"><div class="settings-card__title"><i class="fa-solid fa-globe" aria-hidden="true"></i><div><h2>اللغة والمنطقة الزمنية</h2><p>تحديد اللغة والمنطقة الزمنية الافتراضية</p></div></div></header>
+          <label class="field-label">اللغة الافتراضية</label>
+          <div class="select-wrap"><select><option>العربية (Arabic)</option><option>English</option></select><i class="fa-solid fa-chevron-down"></i></div>
+          <label class="field-label">المنطقة الزمنية</label>
+          <div class="select-wrap"><select><option>القدس (UTC+02:00)</option><option>عمّان (UTC+03:00)</option></select><i class="fa-solid fa-chevron-down"></i></div>
+          <label class="field-label">تنسيق التاريخ والوقت</label>
+          <div class="format-row">
+            <div class="select-wrap"><select><option>24 ساعة</option><option>12 ساعة</option></select><i class="fa-solid fa-chevron-down"></i></div>
+            <div class="select-wrap"><select><option>YYYY-MM-DD</option><option>DD/MM/YYYY</option></select><i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <button class="save-btn" type="button">حفظ التغييرات</button>
+        </article>
+
+        <article class="settings-card notification-card">
+          <header class="settings-card__head"><div class="settings-card__title"><i class="fa-regular fa-bell" aria-hidden="true"></i><div><h2>إعدادات الإشعارات</h2><p>إدارة طرق الإشعارات والتنبيهات</p></div></div></header>
+          <div class="setting-row"><span>إشعارات البريد الإلكتروني</span><label class="switch"><input type="checkbox" checked><span></span></label></div>
+          <div class="setting-row"><span>إشعارات داخل المنصة</span><label class="switch"><input type="checkbox" checked><span></span></label></div>
+          <div class="setting-row"><span>إشعارات الجوال</span><label class="switch"><input type="checkbox"><span></span></label></div>
+          <div class="setting-row"><span>إشعارات الأنشطة التعليمية</span><label class="switch"><input type="checkbox" checked><span></span></label></div>
+          <button class="manage-btn" type="button">إدارة قوالب الإشعارات</button>
+          <button class="save-btn" type="button">حفظ التغييرات</button>
+        </article>
+
+        <article class="settings-card security-card">
+          <header class="settings-card__head"><div class="settings-card__title"><i class="fa-solid fa-lock" aria-hidden="true"></i><div><h2>الأمان وكلمات المرور</h2><p>إعدادات الأمان وسياسات كلمات المرور</p></div></div></header>
+          <div class="setting-row"><span>التحقق بخطوتين</span><label class="switch"><input type="checkbox" checked><span></span></label></div>
+          <div class="setting-row"><span>تطبيق سياسة كلمة المرور القوية</span><label class="switch"><input type="checkbox" checked><span></span></label></div>
+          <div class="setting-row session-row"><span>انتهاء الجلسة التلقائي بعد</span><strong>30 دقيقة</strong></div>
+          <button class="save-btn" type="button">حفظ التغييرات</button>
+        </article>
+      </section>
+      <div class="settings-toast" id="settingsToast" role="status">تم حفظ التغييرات</div>
+    </main>
+  </div>
+  <script src="js/admin-settings.js"></script>
+
+<a class="global-home-link" href="index.html" aria-label="العودة إلى الصفحة الرئيسية">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path><path d="M9.5 20v-5h5v5"></path></svg>
+  <span>العودة إلى الصفحة الرئيسية</span>
+</a>
+</body>
+</html>

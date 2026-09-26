@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-parent-save]').forEach(btn=>btn.addEventListener('click',()=>{const t=document.getElementById('parentSettingsToast');t.classList.add('show');clearTimeout(window.parentToastTimer);window.parentToastTimer=setTimeout(()=>t.classList.remove('show'),1800);}));

@@ -1,0 +1,679 @@
+/* =========================================================
+   ACHIEVEMENTS PAGE
+========================================================= */
+
+.achievements-page{
+    margin:0;
+    background:#F5F7F9;
+    font-family:"Cairo",sans-serif;
+}
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar{
+    position:fixed;
+    top:0;
+    right:0;
+
+    width:190px;
+    height:100vh;
+
+    background:#fff;
+    border-left:1px solid #E7EDF4;
+
+    padding:14px 14px;
+
+    box-shadow:-2px 0 14px rgba(0,0,0,.04);
+
+    z-index:100;
+}
+
+.sidebar-logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.logo-image{
+    width:135px;
+    height:auto;
+    display:block;
+}
+
+.sidebar-nav{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.nav-item{
+    height:40px;
+    padding:0 14px;
+
+    border-radius:11px;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    color:#4C6786;
+
+    font-size:13px;
+    font-weight:600;
+
+    transition:.25s;
+}
+
+.nav-item i{
+    width:16px;
+    font-size:14px;
+    text-align:center;
+}
+
+.nav-item:hover{
+    background:#EEF5FC;
+}
+
+.nav-item.active{
+    background:#163D73;
+    color:#fff;
+}
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content{
+
+    width:calc(100% - 190px);
+    margin-right:190px;
+
+    padding:14px 16px;
+
+    
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.top-header{
+
+    height:48px;
+
+    background:#fff;
+
+    border-radius:14px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 14px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.04);
+
+    margin-bottom:8px;
+}
+
+.welcome-box h2{
+
+    margin:0;
+
+    color:#173D66;
+
+    font-size:20px;
+    font-weight:700;
+}
+
+.welcome-box p{
+
+    margin-top:2px;
+
+    color:#8A97A8;
+
+    font-size:11px;
+}
+
+.header-user{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.header-user-info{
+
+    text-align:right;
+}
+
+.header-user-info strong{
+
+    display:block;
+
+    color:#173D66;
+
+    font-size:13px;
+}
+
+.header-user-info span{
+
+    color:#99A6B8;
+
+    font-size:11px;
+}
+
+.header-avatar{
+
+    width:34px;
+    height:34px;
+
+    border-radius:50%;
+
+    background:#EEF4FB;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.header-notification,
+.header-arrow{
+
+    width:32px;
+    height:32px;
+
+    border:none;
+
+    border-radius:9px;
+
+    background:#F6F8FB;
+
+    cursor:pointer;
+
+    color:#173D66;
+}
+
+/* =========================================================
+   PAGE TITLE
+========================================================= */
+
+.achievements-content{
+
+    width:100%;
+    max-width:1040px;
+
+    margin:auto;
+}
+
+.page-title{
+
+    margin-bottom:10px;
+}
+
+.page-title h1{
+
+    margin:0;
+
+    color:#173D66;
+
+    font-size:20px;
+    font-weight:700;
+}
+
+.page-title p{
+
+    margin-top:4px;
+
+    color:#8B98A8;
+
+    font-size:11px;
+
+    line-height:20px;
+}
+/* =========================================================
+   TOP CARDS
+========================================================= */
+
+.top-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.top-card{
+
+    background:#FFFFFF;
+
+    border:1px solid #E8EDF4;
+
+    border-radius:14px;
+
+    padding:16px;
+
+    min-height:165px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.04);
+}
+
+.top-card h3{
+
+    color:#163D63;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    margin-bottom:14px;
+}
+
+/* =========================================================
+   QUICK STATS
+========================================================= */
+
+.stats-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.stats-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid #EEF2F7;
+}
+
+.stats-item:last-child{
+
+    border-bottom:none;
+}
+
+.stats-item strong{
+
+    font-size:13px;
+
+    color:#163D63;
+
+    font-weight:700;
+}
+
+.stats-item span{
+
+    font-size:12px;
+
+    color:#8A97A8;
+}
+
+/* =========================================================
+   POINTS CARD
+========================================================= */
+
+.points-card{
+
+    text-align:center;
+}
+
+.points-star{
+
+    width:78px;
+
+    display:block;
+
+    margin:6px auto 10px;
+}
+
+.points-card h2{
+
+    font-size:30px;
+
+    color:#163D63;
+
+    margin:6px 0;
+}
+
+.points-card p{
+
+    font-size:12px;
+
+    color:#8A97A8;
+
+    margin:0;
+}
+
+/* =========================================================
+   HOW TO GET POINTS
+========================================================= */
+
+.guide-card ul{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+}
+
+.guide-card li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:12px;
+
+    font-size:13px;
+
+    color:#5D6F83;
+}
+
+.guide-card li:last-child{
+
+    margin-bottom:0;
+}
+
+.guide-card li i{
+
+    color:#2DBE60;
+
+    font-size:14px;
+}
+/* =========================================================
+   BOTTOM ROW
+========================================================= */
+
+.bottom-row{
+
+     display:grid;
+    grid-template-columns:2.3fr .9fr;
+    gap:16px;
+    align-items:start;
+}
+
+.badges-card,
+.progress-card{
+
+    background:#fff;
+
+    border:1px solid #E8EDF4;
+
+    border-radius:14px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.04);
+}
+
+.badges-card{
+
+    padding:12px;
+
+    min-height:220px;
+}
+
+.progress-card{
+
+    padding:12px;
+
+    min-height:220px;
+}
+
+.card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:10px;
+}
+
+.card-header h3{
+
+    margin:0;
+
+    color:#163D63;
+
+    font-size:18px;
+
+    font-weight:700;
+}
+
+.card-header a{
+
+    text-decoration:none;
+
+    color:#3B82F6;
+
+    font-size:12px;
+}
+/* =========================================================
+   PROGRESS CARD
+========================================================= */
+
+.progress-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.progress-circle{
+
+    width:125px;
+
+    height:125px;
+
+    border-radius:50%;
+
+    background:conic-gradient(#FDB022 0 65%, #E8EEF8 65%);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:6px auto 12px;
+}
+
+.progress-circle::before{
+
+    content:"";
+
+    width:92px;
+
+    height:92px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    position:absolute;
+}
+
+.progress-circle span{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#163D63;
+}
+
+.progress-text{
+
+    text-align:center;
+}
+
+.progress-text h4{
+
+    margin:0 0 6px;
+
+    color:#163D63;
+
+    font-size:18px;
+
+    font-weight:700;
+}
+
+.progress-text p{
+
+    margin:0;
+
+    color:#8A97A8;
+
+    font-size:11px;
+
+    line-height:18px;
+}
+
+.continue-btn{
+
+    margin-top:10px;
+
+    border:none;
+
+    background:#163D63;
+
+    color:#fff;
+
+    border-radius:8px;
+
+    padding:8px 16px;
+
+    font-size:12px;
+
+    cursor:pointer;
+}
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badges-wrapper{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.badges-image{
+
+    width:100%;
+
+    max-width:650px;
+
+    height:auto;
+
+    display:block;
+}
+/* =========================================================
+   ROBOT CARD
+========================================================= */
+
+.robot-card{
+
+    margin-top:12px;
+
+    background:#EAF6FF;
+
+    border:1px solid #D8ECFF;
+
+    border-radius:14px;
+
+    padding:16px 22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:18px;
+}
+
+.robot-text{
+
+    flex:1;
+
+    text-align:center;
+}
+
+.robot-text h3{
+
+    margin:0 0 6px;
+
+    color:#163D63;
+
+    font-size:18px;
+
+    font-weight:700;
+}
+
+.robot-text p{
+
+    margin:0 0 10px;
+
+    color:#8A97A8;
+
+    font-size:12px;
+
+    line-height:20px;
+}
+
+.robot-image img{
+
+    width:105px;
+
+    display:block;
+}
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+*{
+    box-sizing:border-box;
+}
+
+img{
+    max-width:100%;
+}
+
+body{
+    overflow-x:hidden;
+}
+

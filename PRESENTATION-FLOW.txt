@@ -1,0 +1,27 @@
+Bloom Kids — Presentation Flow
+
+ابدأ مرة واحدة من index.html باستخدام Live Server، وبعدها كل الصفحات مترابطة من داخل الموقع.
+
+الدخول السريع للمناقشة:
+من صفحة Login استخدم قسم «للعرض التجريبي فقط»:
+- دخول كوليّ أمر → Parent Dashboard
+- دخول كمعلم → Teacher Dashboard
+- دخول كمدير نظام → Admin Dashboard
+بعد تسجيل الخروج ترجع مباشرة إلى صفحة Login وتختار الدور التالي.
+
+ولي الأمر:
+Landing → Login → Parent Dashboard → Profile / Children / Subjects / Reports / Settings
+Subjects → Math / Science / Arabic lessons → Lesson → Activity
+
+المعلم:
+Login → دخول كمعلم → Teacher Dashboard → Educational Content → Add Lesson / Activity / Test → Preview / Edit → Settings
+
+مدير النظام:
+Login → دخول كمدير نظام → Admin Dashboard ↔ Admin Settings
+
+تسجيل الدخول Frontend Demo فقط ولا يحتاج Backend أو API.
+
+
+تحديث المصادقة:
+نسيت كلمة المرور -> تم إرسال الرابط -> إعادة تعيين كلمة المرور -> تسجيل الدخول.
+يوجد زر ثابت "العودة إلى الصفحة الرئيسية" في جميع الصفحات الداخلية لتسهيل العرض.

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/teacher-dashboard.css">
+    <link rel="stylesheet" href="css/dashboard-sidebar-tweaks.css">
+    <link rel="stylesheet" href="css/teacher-pages.css">
+    <title>Bloom Kids | إعدادات المعلم</title>
+    <link rel="stylesheet" href="css/global-ui.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="images/bloomkids-logo-mark.png" alt="Bloom Kids" class="logo-image">
+            </div>
+            <nav class="sidebar-nav">
+                <a href="teacher-dashboard.html" class="nav-item">
+                    <span>لوحة التحكم</span><i class="fa-solid fa-house"></i>
+                </a>
+                <a href="teacher-content.html" class="nav-item">
+                    <span>المحتوى التعليمي</span><i class="fa-solid fa-book-open"></i>
+                </a>
+                <a href="teacher-settings.html" class="nav-item active">
+                    <span>الإعدادات</span><i class="fa-solid fa-gear"></i>
+                </a>
+                <a href="login.html?role=teacher" class="nav-item">
+                    <span>تسجيل خروج</span><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="top-header">
+                <div class="welcome-box">
+                    <h2>أهلاً بك</h2>
+                    <p>لوحة تحكم المعلم</p>
+                </div>
+                <div class="header-user">
+                    <button class="header-notification" type="button" aria-label="التنبيهات"><i class="fa-regular fa-bell"></i></button>
+                    <div class="header-avatar"></div>
+                    <div class="header-user-info"><strong>ياسمين</strong><span>معلم</span></div>
+                    <button class="header-arrow" type="button" aria-label="فتح قائمة المستخدم"><i class="fa-solid fa-chevron-down"></i></button>
+                </div>
+            </header>
+
+            <div class="teacher-settings-heading">
+                <div>
+                    <span class="teacher-settings-kicker">تخصيص تجربة المعلم</span>
+                    <h1 class="teacher-page-title">الإعدادات</h1>
+                    <p class="teacher-page-subtitle">تحكم بالتنبيهات، تفضيلات التدريس، وخصوصية الحساب من مكان واحد.</p>
+                </div>
+                <button class="teacher-settings-save" type="button" id="saveTeacherSettings"><i class="fa-regular fa-floppy-disk"></i><span>حفظ التغييرات</span></button>
+            </div>
+
+            <section class="teacher-settings-grid">
+                <article class="teacher-settings-card">
+                    <div class="teacher-settings-card__title"><i class="fa-regular fa-bell"></i><div><h2>الإشعارات</h2><p>حدد التنبيهات التي تريد ظهورها أثناء المتابعة.</p></div></div>
+                    <div class="teacher-settings-list">
+                        <div class="teacher-setting-row"><div class="teacher-setting-info"><h3>تنبيهات تقدم الطلاب</h3><p>إظهار تنبيهات عند وجود تغير ملحوظ في تقدم الطالب.</p></div><label class="teacher-switch"><input type="checkbox" checked><span></span></label></div>
+                        <div class="teacher-setting-row"><div class="teacher-setting-info"><h3>تنبيهات إكمال الدروس</h3><p>إشعار عند إكمال الطالب لدرس أو نشاط.</p></div><label class="teacher-switch"><input type="checkbox" checked><span></span></label></div>
+                        <div class="teacher-setting-row"><div class="teacher-setting-info"><h3>الملخص الأسبوعي</h3><p>عرض ملخص أسبوعي لأداء الطلاب داخل لوحة التحكم.</p></div><label class="teacher-switch"><input type="checkbox" checked><span></span></label></div>
+                    </div>
+                </article>
+
+                <article class="teacher-settings-card">
+                    <div class="teacher-settings-card__title"><i class="fa-solid fa-sliders"></i><div><h2>تفضيلات التدريس</h2><p>خصص المحتوى الافتراضي وطريقة عرض لوحة التحكم.</p></div></div>
+                    <div class="teacher-preferences">
+                        <label class="teacher-field"><span>لغة الواجهة</span><select class="teacher-select"><option>العربية</option></select></label>
+                        <label class="teacher-field"><span>المادة الافتراضية</span><select class="teacher-select"><option>الرياضيات</option><option>العلوم</option><option>اللغة العربية</option></select></label>
+                        <label class="teacher-field"><span>الصف الافتراضي</span><select class="teacher-select"><option>المرحلة الابتدائية</option></select></label>
+                        <div class="teacher-setting-row teacher-setting-row--compact"><div class="teacher-setting-info"><h3>عرض ملخص الأداء</h3><p>إظهار بطاقات الأداء عند فتح لوحة التحكم.</p></div><label class="teacher-switch"><input type="checkbox" checked><span></span></label></div>
+                    </div>
+                </article>
+
+                <article class="teacher-settings-card teacher-settings-card--wide">
+                    <div class="teacher-settings-card__title"><i class="fa-solid fa-shield-halved"></i><div><h2>الأمان والخصوصية</h2><p>خيارات بسيطة لحماية حساب المعلم أثناء العرض التجريبي.</p></div></div>
+                    <div class="teacher-security-grid">
+                        <div class="teacher-setting-row"><div class="teacher-setting-info"><h3>تنبيه عند تسجيل دخول جديد</h3><p>إظهار إشعار عند استخدام جهاز جديد.</p></div><label class="teacher-switch"><input type="checkbox" checked><span></span></label></div>
+                        <div class="teacher-setting-row"><div class="teacher-setting-info"><h3>التحقق بخطوتين</h3><p>إضافة طبقة أمان إضافية للحساب.</p></div><label class="teacher-switch"><input type="checkbox"><span></span></label></div>
+                    </div>
+                </article>
+            </section>
+            <div class="teacher-settings-toast" id="teacherSettingsToast" role="status">تم حفظ إعدادات المعلم بنجاح</div>
+        </main>
+    </div>
+
+<a class="global-home-link" href="index.html" aria-label="العودة إلى الصفحة الرئيسية">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path><path d="M9.5 20v-5h5v5"></path></svg>
+  <span>العودة إلى الصفحة الرئيسية</span>
+</a>
+    <script src="js/teacher-settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+
+/* Bloom Kids — Teacher content forms */
+.teacher-form-card { background:#fff; border:1px solid #e7eef7; border-radius:18px; box-shadow:0 4px 18px rgba(22,61,115,.04); padding:28px; }
+.teacher-form-head { margin-bottom:24px; display:flex; align-items:flex-start; justify-content:space-between; gap:20px; }
+.teacher-form-head h1 { margin:0; color:#163d73; font-size:27px; font-weight:800; }
+.teacher-form-head p { margin:5px 0 0; color:#71849e; font-size:14px; }
+.teacher-back-link { min-height:42px; padding:0 16px; border:1px solid #dce7f5; border-radius:10px; display:inline-flex; align-items:center; gap:7px; color:#214c86; font-size:14px; font-weight:700; background:#fff; }
+.teacher-content-form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 20px; }
+.teacher-form-field { display:grid; gap:7px; }
+.teacher-form-field.full { grid-column:1/-1; }
+.teacher-form-field label { color:#314968; font-size:14px; font-weight:700; }
+.teacher-form-field input,.teacher-form-field select,.teacher-form-field textarea { width:100%; border:1px solid #dce7f5; border-radius:11px; padding:0 14px; color:#486482; background:#fff; font-family:'Cairo',sans-serif; font-size:14px; outline:0; }
+.teacher-form-field input,.teacher-form-field select { height:48px; }
+.teacher-form-field textarea { min-height:120px; padding-top:12px; resize:vertical; }
+.teacher-form-field input:focus,.teacher-form-field select:focus,.teacher-form-field textarea:focus { border-color:#7295bc; box-shadow:0 0 0 3px rgba(33,76,134,.08); }
+.teacher-form-actions { grid-column:1/-1; display:flex; justify-content:flex-start; gap:10px; margin-top:4px; }
+.teacher-form-submit,.teacher-form-cancel { min-height:44px; padding:0 23px; border-radius:10px; font-family:'Cairo',sans-serif; font-size:14px; font-weight:700; cursor:pointer; }
+.teacher-form-submit { border:0; color:#fff; background:#163d73; }
+.teacher-form-submit:hover { background:#214c86; }
+.teacher-form-cancel { border:1px solid #dce7f5; color:#214c86; background:#fff; display:inline-flex; align-items:center; justify-content:center; }
+.teacher-form-toast { position:fixed; left:24px; bottom:24px; z-index:50; padding:12px 18px; border-radius:12px; background:#163d73; color:#fff; opacity:0; transform:translateY(10px); transition:.2s; pointer-events:none; }
+.teacher-form-toast.show { opacity:1; transform:translateY(0); }
+.teacher-preview-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.teacher-preview-item { padding:16px; border:1px solid #edf2f7; border-radius:14px; background:#f9fbfd; }
+.teacher-preview-item span { display:block; color:#8a9bb0; font-size:12px; }
+.teacher-preview-item strong { display:block; margin-top:3px; color:#314968; font-size:15px; }
+.teacher-preview-body { grid-column:1/-1; padding:20px; border-radius:14px; background:#f6f9fd; color:#55708f; line-height:1.9; }
+@media(max-width:760px){.teacher-content-form,.teacher-preview-grid{grid-template-columns:1fr}.teacher-form-field.full,.teacher-form-actions,.teacher-preview-body{grid-column:auto}.teacher-form-head{flex-direction:column}}

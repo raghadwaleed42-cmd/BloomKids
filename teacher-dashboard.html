@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bloom Kids | Teacher Dashboard</title>
+
+    <!-- Cairo Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+<link rel="stylesheet" href="css/teacher-dashboard.css">
+    <link rel="stylesheet" href="css/dashboard-sidebar-tweaks.css">
+    <link rel="stylesheet" href="css/global-ui.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+
+    <img src="images/bloomkids-logo-mark.png"
+         alt="Bloom Kids"
+         class="logo-image">
+
+</div>
+
+<nav class="sidebar-nav">
+
+    <a href="teacher-dashboard.html" class="nav-item active">
+
+        <span>لوحة التحكم</span>
+
+        <i class="fa-solid fa-house"></i>
+
+    </a>
+
+    <a href="teacher-content.html" class="nav-item">
+
+        <span>المحتوى التعليمي</span>
+
+        <i class="fa-solid fa-book-open"></i>
+
+    </a>
+
+    <a href="teacher-settings.html" class="nav-item">
+
+        <span>الإعدادات</span>
+
+        <i class="fa-solid fa-gear"></i>
+
+    </a>
+
+    <a href="login.html?role=teacher" class="nav-item">
+
+        <span>تسجيل خروج</span>
+
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+    </a>
+
+</nav>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="top-header">
+                <div class="welcome-box">
+
+    <h2>أهلاً بك</h2>
+
+    <p>لوحة تحكم المعلم</p>
+
+</div>
+
+<div class="header-user">
+
+    <button class="header-notification" type="button" aria-label="التنبيهات">
+        <i class="fa-regular fa-bell"></i>
+    </button>
+
+    <div class="header-avatar"></div>
+
+    <div class="header-user-info">
+        <strong>ياسمين</strong>
+        <span>معلم</span>
+    </div>
+
+    <button class="header-arrow" type="button" aria-label="فتح قائمة المستخدم">
+        <i class="fa-solid fa-chevron-down"></i>
+    </button>
+
+</div>
+
+            </header>
+
+            <div class="stats-cards">
+
+    <div class="stat-card orange">
+        <div class="stat-icon">
+            <i class="fa-solid fa-ranking-star"></i>
+        </div>
+
+        <div class="stat-info">
+            <h3>56</h3>
+            <span>متوسط أداء الصف</span>
+        </div>
+    </div>
+
+    <div class="stat-card purple">
+        <div class="stat-icon">
+            <i class="fa-solid fa-users"></i>
+        </div>
+
+        <div class="stat-info">
+            <h3>354</h3>
+            <span>عدد الطلاب</span>
+        </div>
+    </div>
+
+    <div class="stat-card green">
+        <div class="stat-icon">
+            <i class="fa-solid fa-book-open"></i>
+        </div>
+
+        <div class="stat-info">
+            <h3>200</h3>
+            <span>الدروس المكتملة</span>
+        </div>
+    </div>
+
+    <div class="stat-card blue">
+        <div class="stat-icon">
+            <i class="fa-regular fa-bell"></i>
+        </div>
+
+        <div class="stat-info">
+            <h3>17</h3>
+            <span>التنبيهات</span>
+        </div>
+    </div>
+
+</div>
+
+<div class="charts-section">
+
+   <div class="chart-card small-chart">
+
+    <h3>أداء الصف حسب المهارات</h3>
+
+    <canvas id="barChart"></canvas>
+
+</div>
+
+    <div class="chart-card large-chart">
+        <h3>أداء الصفوف</h3>
+        <canvas id="lineChart"></canvas>
+    </div>
+
+</div>
+<!-- Bottom Section -->
+
+<div class="bottom-section">
+
+    <!-- Top Students -->
+
+    <div class="table-card">
+
+        <h3>الطلاب المتفوقون</h3>
+
+        <div class="table-wrapper">
+            <table class="students-table">
+
+    <thead>
+
+        <tr>
+
+            <th>#</th>
+
+            <th>اسم الطالب</th>
+
+            <th>تاريخ الاشتراك</th>
+
+            <th>الحالة</th>
+
+            <th>خيارات</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+<tr>
+
+    <td>01</td>
+
+    <td class="student-name">أحمد يوسف</td>
+
+    <td class="student-date">
+        29-شوال 1446<br>
+        <span>10:00 م</span>
+    </td>
+
+    <td>
+        <span class="status active">منتظم</span>
+    </td>
+
+    <td>
+        <button class="more-btn" type="button" aria-label="خيارات الطالب أحمد يوسف">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+    </td>
+
+</tr>
+
+<tr>
+
+    <td>01</td>
+
+    <td class="student-name">محمد أحمد</td>
+
+    <td class="student-date">
+        29-شوال 1446<br>
+        <span>10:00 م</span>
+    </td>
+
+    <td>
+        <span class="status active">منتظم</span>
+    </td>
+
+    <td>
+        <button class="more-btn" type="button" aria-label="خيارات الطالب محمد أحمد">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+    </td>
+
+</tr>
+
+<tr>
+
+    <td>03</td>
+
+    <td class="student-name">سامر حسين</td>
+
+    <td class="student-date">
+        29-شوال 1446<br>
+        <span>10:00 م</span>
+    </td>
+
+    <td>
+        <span class="status inactive">غير منتظم</span>
+    </td>
+
+    <td>
+        <button class="more-btn" type="button" aria-label="خيارات الطالب سامر حسين">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+    </td>
+
+</tr>
+
+    </tbody>
+
+</table>
+
+        </div>
+
+    </div>
+
+    <!-- Latest Updates -->
+
+   <div class="donut-card">
+
+    <h3>آخر التطورات</h3>
+
+    <div class="donut-wrapper">
+
+        <img src="images/Group 2606.svg"
+             alt="آخر التطورات"
+             class="donut-svg">
+
+        <div class="donut-legend">
+
+            <div class="legend-item">
+                <span class="legend-dot blue"></span>
+                <span>الدروس المكتملة</span>
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-dot purple"></span>
+                <span>الدروس الجارية</span>
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-dot pink"></span>
+                <span>الدروس القادمة</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
+<script src="js/teacher-dashboard.js"></script>
+
+
+<a class="global-home-link" href="index.html" aria-label="العودة إلى الصفحة الرئيسية">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path><path d="M9.5 20v-5h5v5"></path></svg>
+  <span>العودة إلى الصفحة الرئيسية</span>
+</a>
+</body>
+
+</html>

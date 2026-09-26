@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bloom Kids - لوحة التقدم والإنجازات</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/><link href="css/progress.css" rel="stylesheet"/>
+<link href="css/dashboard-sidebar-tweaks.css" rel="stylesheet"/>
+<link href="css/parent-header-uniform.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/global-ui.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<div class="sidebar-logo">
+<img alt="Bloom Kids Logo" class="logo-image" src="images/bloomkids-logo-mark.png"/>
+</div>
+<nav class="sidebar-nav menu">
+<a class="nav-item menu-item" href="parent-dashboard.html">
+<i class="fa-solid fa-house"></i><span>لوحة التحكم</span>
+</a>
+<a class="nav-item menu-item" href="parent-profile.html">
+<i class="fa-regular fa-user"></i><span>الملف الشخصي</span>
+</a>
+<a class="nav-item menu-item" href="child-profile.html">
+<i class="fa-regular fa-clipboard"></i><span>الأطفال</span>
+</a>
+<a class="nav-item menu-item" href="subjects.html">
+<i class="fa-solid fa-arrow-trend-up"></i><span>المواد الدراسية</span>
+</a>
+<a aria-current="page" class="nav-item menu-item active" href="bloom-kids-progress-transparent-robot.html">
+<i class="fa-solid fa-chart-column"></i><span>التقارير</span>
+</a>
+<a class="nav-item menu-item" href="parent-settings.html">
+<i class="fa-solid fa-gear"></i><span>الإعدادات</span>
+</a>
+<a class="nav-item menu-item logout" href="login.html?role=parent">
+<i class="fa-solid fa-arrow-right-from-bracket"></i><span>تسجيل خروج</span>
+</a>
+</nav>
+</aside>
+<main class="main">
+<header class="topbar top-header">
+<div class="welcome welcome-box">
+<h1>أهلاً بك</h1>
+<p>اقتراحاتي · نبأ اقتراحي</p>
+</div>
+<div class="header-user">
+<div class="header-user-info">
+<strong>ماهر مراد</strong>
+<span>ولي أمر</span>
+</div>
+<div class="small-avatar">
+<i class="fa-solid fa-user"></i>
+</div>
+<button aria-label="الإشعارات" class="notification-button" type="button">
+<i class="fa-regular fa-bell"></i>
+<span class="notification-dot"></span>
+</button>
+<button aria-expanded="false" aria-haspopup="true" aria-label="فتح قائمة الحساب" class="dropdown-button" id="profileTrigger" type="button">
+<i class="fa-solid fa-chevron-down"></i>
+</button>
+<div aria-label="قائمة الحساب" class="profile-dropdown" id="profileDropdown" role="menu">
+<div class="dropdown-user">
+<div aria-hidden="true" class="mini-avatar">م</div>
+<div>
+<strong>ماهر مراد</strong>
+<span>ولي أمر</span>
+</div>
+</div>
+<a class="dropdown-item" href="parent-profile.html" role="menuitem">
+<svg fill="none" viewbox="0 0 24 24"><circle cx="12" cy="8" r="3"></circle><path d="M5 20c1-5 4-7 7-7s6 2 7 7"></path></svg>
+<span>الملف الشخصي</span>
+</a>
+<a class="dropdown-item" href="parent-settings.html" role="menuitem">
+<svg fill="none" viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.4-6.4L17 7m-10 10-1.4 1.4m12.8 0L17 17M7 7 5.6 5.6"></path></svg>
+<span>الإعدادات</span>
+</a>
+<a class="dropdown-item danger" href="login.html" role="menuitem">
+<svg fill="none" viewbox="0 0 24 24"><path d="M10 5H5v14h5"></path><path d="M13 8l4 4-4 4m4-4H9"></path></svg>
+<span>تسجيل الخروج</span>
+</a>
+</div>
+</div>
+</header>
+<section class="section-head">
+<h2>التقدم والإنجازات</h2>
+<p>تابع تقدمك، اجمع الشارات، وواصل رحلتك التعليمية لتحقيق مستويات جديدة.</p>
+</section>
+<section class="top-grid">
+<article class="card top-card">
+<h3 class="card-title">كيف تحصل على النقاط؟</h3>
+<ul class="points-list">
+<li><i aria-hidden="true" class="check-icon" data-lucide="circle-check-big"></i><span>+20 نقطة عند إكمال الدرس</span></li>
+<li><i aria-hidden="true" class="check-icon" data-lucide="circle-check-big"></i><span>+10 نقاط عند إنهاء النشاط</span></li>
+<li><i aria-hidden="true" class="check-icon" data-lucide="circle-check-big"></i><span>+5 نقاط للإجابة الصحيحة</span></li>
+<li><i aria-hidden="true" class="check-icon" data-lucide="circle-check-big"></i><span>+30 نقطة عند الحصول على شارة جديدة</span></li>
+</ul>
+</article>
+<article class="card top-card points-card">
+<h3 class="card-title">نقاطي</h3>
+<div aria-label="شارة نقاط" class="award"><img alt="شارة TOP RATED PLUS" class="award-img" src="images/progress-award.jpg"/></div>
+</article>
+<article class="card top-card stats-card">
+<h3 class="card-title">الإحصائيات السريعة</h3>
+<ul class="stats-list">
+<li><i aria-hidden="true" class="check-icon" data-lucide="circle-check-big"></i><span>15 درسًا مكتملًا</span></li>
+<li><i aria-hidden="true" class="check-icon" data-lucide="circle-check-big"></i><span>28 نشاطًا مكتملًا</span></li>
+<li><i aria-hidden="true" class="check-icon" data-lucide="circle-check-big"></i><span>12 ساعة و30 دقيقة من التعلم</span></li>
+<li><i aria-hidden="true" class="check-icon" data-lucide="circle-check-big"></i><span>8 أيام تعلم متتالية</span></li>
+</ul>
+</article>
+</section>
+<section class="second-grid">
+<article class="card progress-card">
+<h3>نسبة التقدم</h3>
+<img alt="نسبة التقدم 65%" class="donut-image" src="images/progress-donut.jpg"/>
+<p>أحسنت! لقد أحرزت تقدماً رائعاً</p>
+<button class="btn" id="pathBtn" type="button">استعراض المسار التعليمي</button>
+</article>
+<article class="card badges-card">
+<h3>شارات الإنجاز</h3>
+<div class="badges">
+<div class="badge-item">
+<div class="shield"><img alt="شارة المثابر" class="badge-shield-img" src="images/badge-persistent.jpg"/></div>
+<strong>المثابر</strong>
+<small>أكمل 30 نشاطًا</small>
+<div class="meter"><i class="progress-67"></i></div>
+<div class="count">20 / 30</div>
+</div>
+<div class="badge-item">
+<div class="shield"><img alt="شارة متعلم نشط" class="badge-shield-img" src="images/badge-active-learner.jpg"/></div>
+<strong>متعلم نشط</strong>
+<small>تعلم 10 دروس</small>
+<div class="earned">تم الحصول عليها</div>
+</div>
+<div class="badge-item">
+<div class="shield"><img alt="شارة متفوق" class="badge-shield-img" src="images/badge-excellent.jpg"/></div>
+<strong>متفوق</strong>
+<small>أكمل 20 درسًا</small>
+<div class="meter"><i class="progress-60"></i></div>
+<div class="count">12 / 20</div>
+</div>
+<div class="badge-item">
+<div class="shield"><img alt="شارة مركز" class="badge-shield-img" src="images/badge-focused.jpg"/></div>
+<strong>مركز</strong>
+<small>أجب بشكل صحيح على<br/>50 سؤالًا</small>
+<div class="meter"><i class="progress-64"></i></div>
+<div class="count">32 / 50</div>
+</div>
+<div class="badge-item">
+<div class="shield"><img alt="شارة خبير" class="badge-shield-img" src="images/badge-expert.jpg"/></div>
+<strong>خبير</strong>
+<small>أكمل 50 درسًا</small>
+<div class="meter"><i class="progress-24"></i></div>
+<div class="count">12 / 50</div>
+</div>
+</div>
+</article>
+</section>
+<section class="bottom-banner">
+<div class="banner-center">
+<h3>هيا بنا!</h3>
+<p>أنت تقوم بعمل رائع! استمر في التعلم، وستصبح أفضل كل يوم.</p>
+</div>
+<svg aria-hidden="true" class="soft-illustration" fill="none" viewbox="0 0 250 130">
+<circle cx="46" cy="100" fill="#7b8f9d" r="10"></circle>
+<path d="M46 110v-45m0 18-17 14m17-15 17 10m-17 18-16 18m16-18 14 18" stroke="#7b8f9d" stroke-linecap="round" stroke-width="6"></path>
+<circle cx="176" cy="84" fill="#7b8f9d" r="10"></circle>
+<path d="M176 94v-36m0 12-18 8m18-8 21 15m-21 9-13 25m13-25 17 21" stroke="#7b8f9d" stroke-linecap="round" stroke-width="6"></path>
+<rect height="28" rx="3" stroke="#7b8f9d" stroke-width="3" width="35" x="92" y="18"></rect>
+<path d="M105 45 95 66m27-18 12 19" stroke="#7b8f9d" stroke-width="3"></path>
+<rect height="24" rx="3" stroke="#7b8f9d" stroke-width="3" width="29" x="137" y="8"></rect>
+<rect height="24" rx="3" stroke="#7b8f9d" stroke-width="3" width="24" x="26" y="18"></rect>
+</svg>
+<img alt="المساعد الافتراضي" class="robot" src="images/progress-robot.png"/>
+</section>
+</main>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="js/progress.js"></script>
+
+<a class="global-home-link" href="index.html" aria-label="العودة إلى الصفحة الرئيسية">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path><path d="M9.5 20v-5h5v5"></path></svg>
+  <span>العودة إلى الصفحة الرئيسية</span>
+</a>
+</body>
+</html>

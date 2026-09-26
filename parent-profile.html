@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bloom Kids | الملف الشخصي</title>
+<!-- Cairo Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+<!-- CSS -->
+<link href="css/student-dashboard.css" rel="stylesheet"/>
+<link href="css/dashboard-sidebar-tweaks.css" rel="stylesheet"/>
+<link href="css/parent-header-uniform.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/global-ui.css">
+</head>
+<body>
+<div class="dashboard">
+<!-- ========================================= -->
+<!-- Sidebar -->
+<!-- ========================================= -->
+<aside class="sidebar">
+<!-- Logo -->
+<div class="logo-container">
+<img alt="Bloom Kids Logo" class="logo-image" src="images/bloomkids-logo-mark.png"/>
+</div>
+<!-- Navigation -->
+<nav class="sidebar-nav">
+<!-- Dashboard -->
+<a class="nav-item" href="parent-dashboard.html">
+<span class="nav-icon">
+<i class="fa-solid fa-house"></i>
+</span>
+<span class="nav-text">
+                        لوحة التحكم
+                    </span>
+</a>
+<!-- Profile -->
+<a aria-current="page" class="nav-item active" href="parent-profile.html">
+<span class="nav-icon">
+<i class="fa-regular fa-user"></i>
+</span>
+<span class="nav-text">
+                        الملف الشخصي
+                    </span>
+</a>
+<!-- Children -->
+<a class="nav-item" href="child-profile.html">
+<span class="nav-icon">
+<i class="fa-regular fa-clipboard"></i>
+</span>
+<span class="nav-text">
+                        الأطفال
+                    </span>
+</a>
+<!-- Subjects -->
+<a class="nav-item" href="subjects.html">
+<span class="nav-icon">
+<i class="fa-solid fa-arrow-trend-up"></i>
+</span>
+<span class="nav-text">
+                        المواد الدراسية
+                    </span>
+</a>
+<!-- Reports -->
+<a class="nav-item" href="bloom-kids-progress-transparent-robot.html">
+<span class="nav-icon">
+<i class="fa-solid fa-chart-column"></i>
+</span>
+<span class="nav-text">
+                        التقارير
+                    </span>
+</a>
+<!-- Settings -->
+<a class="nav-item" href="parent-settings.html">
+<span class="nav-icon">
+<i class="fa-solid fa-gear"></i>
+</span>
+<span class="nav-text">
+                        الإعدادات
+                    </span>
+</a>
+<!-- Logout -->
+<a class="nav-item logout-item" href="login.html?role=parent">
+<span class="nav-icon">
+<i class="fa-solid fa-arrow-right-from-bracket"></i>
+</span>
+<span class="nav-text">
+                        تسجيل خروج
+                    </span>
+</a>
+</nav>
+</aside>
+<!-- ========================================= -->
+<!-- Main Area -->
+<!-- ========================================= -->
+<main class="main-area">
+<!-- ========================================= -->
+<!-- Top Header -->
+<!-- ========================================= -->
+<header class="top-header">
+<!-- Welcome -->
+<div class="welcome-box">
+<h1>
+                        أهلاً بك
+                    </h1>
+<p>تابع رحلة طفلك التعليمية واكتشف تقدمه اليوم</p>
+</div>
+<!-- Header User -->
+<div class="header-user">
+<!-- User Info -->
+<div class="header-user-info">
+<strong>
+                            ماهر مراد
+                        </strong>
+<span>
+                            ولي أمر
+                        </span>
+</div>
+<!-- Small Avatar -->
+<div class="small-avatar">
+<i class="fa-solid fa-user"></i>
+</div>
+<!-- Notification -->
+<button aria-label="الإشعارات" class="notification-button" type="button">
+<i class="fa-regular fa-bell"></i>
+<span class="notification-dot"></span>
+</button>
+<!-- Dropdown -->
+<button aria-label="القائمة" class="dropdown-button" type="button">
+<i class="fa-solid fa-chevron-down"></i>
+</button>
+</div>
+</header>
+<!-- ========================================= -->
+<!-- Page Content -->
+<!-- ========================================= -->
+<section class="page-content">
+<!-- Page title -->
+<h2 class="page-title">
+                    الملف الشخصي
+                </h2>
+<!-- ========================================= -->
+<!-- Profile information -->
+<!-- ========================================= -->
+<div class="profile-summary">
+<!-- Avatar -->
+<div class="profile-avatar">
+<i class="fa-solid fa-user"></i>
+</div>
+<!-- User -->
+<div class="profile-name">
+<h3>
+                            ماهر مراد
+                        </h3>
+<p>
+                            maher@gmail.com
+                        </p>
+</div>
+<!-- Edit -->
+<button class="edit-button" id="editButton" type="button">
+<i class="fa-solid fa-pen"></i>
+<span>
+                            تعديل
+                        </span>
+</button>
+</div>
+<!-- ========================================= -->
+<!-- Form -->
+<!-- ========================================= -->
+<form class="profile-form" id="profileForm">
+<!-- Parent name -->
+<div class="form-group">
+<label for="parentName">
+                            اسم ولي الأمر
+                        </label>
+<div class="input-wrapper">
+<input id="parentName" readonly="" type="text" value="ماهر مراد"/>
+<i class="fa-regular fa-user input-icon"></i>
+</div>
+</div>
+<!-- Phone -->
+<div class="form-group">
+<label for="phone">
+                            رقم الجوال
+                        </label>
+<div class="phone-row">
+<!-- Phone Number -->
+<div class="input-wrapper phone-input">
+<input id="phone" readonly="" type="tel" value="599155787"/>
+<i class="fa-solid fa-phone input-icon"></i>
+</div>
+<!-- Country Code -->
+<div class="country-code">
+<i class="fa-solid fa-chevron-down"></i>
+<span>
+                                    +970
+                                </span>
+<span class="country-circle"></span>
+</div>
+</div>
+</div>
+<!-- Child name -->
+<div class="form-group">
+<label for="childName">
+                            اسم الطفل
+                        </label>
+<div class="input-wrapper">
+<input id="childName" readonly="" type="text" value="فرح"/>
+<span class="child-dot"></span>
+</div>
+</div>
+<!-- Age -->
+<div class="form-group">
+<label for="age">
+                            العمر
+                        </label>
+<div class="input-wrapper">
+<input id="age" readonly="" type="text" value="8 أعوام"/>
+<span class="age-dot"></span>
+</div>
+</div>
+<!-- School grade -->
+<div class="form-group">
+<label for="grade">
+                            الصف الدراسي
+                        </label>
+<div class="input-wrapper">
+<input id="grade" readonly="" type="text" value="الصف الدراسي"/>
+<span class="gray-dot"></span>
+</div>
+</div>
+<!-- Learning goal -->
+<div class="form-group">
+<label for="goal">
+                            هدف الانتفاع عن الدراسة
+                        </label>
+<div class="input-wrapper">
+<input id="goal" readonly="" type="text" value="هدف الانتفاع عن الدراسة"/>
+<span class="gray-dot"></span>
+</div>
+</div>
+</form>
+<!-- ========================================= -->
+<!-- Difficult subjects -->
+<!-- ========================================= -->
+<section class="subjects-section">
+<h3>
+                        المواد التي يواجه فيها صعوبة
+                    </h3>
+<!-- Arabic -->
+<div class="subject-row">
+<span class="subject-name">
+                            اللغة العربية
+                        </span>
+<label class="switch">
+<input id="arabicSubject" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<!-- Math -->
+<div class="subject-row">
+<span class="subject-name">
+                            الرياضيات
+                        </span>
+<label class="switch">
+<input checked="" id="mathSubject" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<!-- Science -->
+<div class="subject-row">
+<span class="subject-name">
+                            العلوم
+                        </span>
+<label class="switch">
+<input checked="" id="scienceSubject" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<!-- English -->
+<div class="subject-row">
+<span class="subject-name">
+                            اللغة الإنجليزية
+                        </span>
+<label class="switch">
+<input checked="" id="englishSubject" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<!-- Other -->
+<div class="subject-row">
+<span class="subject-name">
+                            أخرى
+                        </span>
+<label class="switch">
+<input checked="" id="otherSubject" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+</section>
+<!-- ========================================= -->
+<!-- Bottom button -->
+<!-- ========================================= -->
+<div class="bottom-actions">
+<button class="next-button" id="nextButton" type="button">
+
+                        التالي
+
+                    </button>
+</div>
+</section>
+</main>
+</div>
+<!-- JavaScript -->
+<script src="js/student-dashboard.js"></script>
+<script src="js/parent-profile.js"></script>
+
+<a class="global-home-link" href="index.html" aria-label="العودة إلى الصفحة الرئيسية">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path><path d="M9.5 20v-5h5v5"></path></svg>
+  <span>العودة إلى الصفحة الرئيسية</span>
+</a>
+</body>
+</html>

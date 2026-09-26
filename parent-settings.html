@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Bloom Kids | إعدادات ولي الأمر</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="css/student-dashboard.css"><link rel="stylesheet" href="css/dashboard-sidebar-tweaks.css"><link rel="stylesheet" href="css/parent-header-uniform.css"><link rel="stylesheet" href="css/parent-pages.css">    <link rel="stylesheet" href="css/global-ui.css">
+</head><body><div class="dashboard">
+<aside class="sidebar">
+  <div class="sidebar-logo"><img src="images/bloomkids-logo-mark.png" alt="Bloom Kids Logo" class="logo-image"></div>
+  <nav class="sidebar-nav">
+    <a href="parent-dashboard.html" class="nav-item "><i class="fa-solid fa-house"></i><span>لوحة التحكم</span></a>
+    <a href="parent-profile.html" class="nav-item "><i class="fa-regular fa-user"></i><span>الملف الشخصي</span></a>
+    <a href="child-profile.html" class="nav-item "><i class="fa-regular fa-clipboard"></i><span>الأطفال</span></a>
+    <a href="subjects.html" class="nav-item "><i class="fa-solid fa-arrow-trend-up"></i><span>المواد الدراسية</span></a>
+    <a href="bloom-kids-progress-transparent-robot.html" class="nav-item "><i class="fa-solid fa-chart-column"></i><span>التقارير</span></a>
+    <a href="parent-settings.html" class="nav-item active"><i class="fa-solid fa-gear"></i><span>الإعدادات</span></a>
+    <a href="login.html?role=parent" class="nav-item"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>تسجيل خروج</span></a>
+  </nav>
+</aside>
+<main class="main-content">
+<header class="top-header">
+  <div class="welcome-box"><h2>أهلاً بك</h2><p>إعدادات حساب وليّ الأمر</p></div>
+  <div class="header-user">
+    <button class="header-arrow" type="button" aria-label="فتح قائمة المستخدم"><i class="fa-solid fa-chevron-down"></i></button>
+    <button class="header-notification" type="button" aria-label="الإشعارات"><i class="fa-regular fa-bell"></i><span class="notification-dot"></span></button>
+    <div class="header-avatar"><i class="fa-solid fa-user"></i></div>
+    <div class="header-user-info"><strong>ماهر مراد</strong><span>ولي أمر</span></div>
+  </div>
+</header>
+<section class="parent-page-heading"><h1>الإعدادات</h1><p>خصص حسابك والتنبيهات بما يناسب متابعة رحلة طفلك التعليمية.</p></section>
+<section class="parent-settings-grid">
+ <article class="parent-settings-card"><div class="parent-settings-card__title"><i class="fa-regular fa-user"></i><div><h2>الحساب الشخصي</h2><p>معلومات التواصل الأساسية</p></div></div><div class="parent-field"><label for="parentName">اسم وليّ الأمر</label><input id="parentName" value="ماهر مراد"></div><div class="parent-field"><label for="parentEmail">البريد الإلكتروني</label><input id="parentEmail" type="email" value="maher@gmail.com"></div><div class="parent-field"><label for="parentPhone">رقم الجوال</label><input id="parentPhone" value="599155787"></div><div class="parent-save-row"><button class="parent-save-btn" type="button" data-parent-save>حفظ التغييرات</button></div></article>
+ <article class="parent-settings-card"><div class="parent-settings-card__title"><i class="fa-regular fa-bell"></i><div><h2>الإشعارات</h2><p>حدد التنبيهات التي ترغب باستلامها</p></div></div><div class="parent-setting-toggle"><div><strong>تنبيهات إكمال الدروس</strong><small>إشعار عند إكمال الطفل درسًا جديدًا</small></div><label class="parent-switch"><input type="checkbox" checked><span></span></label></div><div class="parent-setting-toggle"><div><strong>تنبيهات الإنجازات</strong><small>إشعار عند الحصول على شارة جديدة</small></div><label class="parent-switch"><input type="checkbox" checked><span></span></label></div><div class="parent-setting-toggle"><div><strong>الملخص الأسبوعي</strong><small>تقرير أسبوعي عن تقدم الطفل</small></div><label class="parent-switch"><input type="checkbox" checked><span></span></label></div><div class="parent-save-row"><button class="parent-save-btn" type="button" data-parent-save>حفظ التغييرات</button></div></article>
+ <article class="parent-settings-card"><div class="parent-settings-card__title"><i class="fa-solid fa-sliders"></i><div><h2>تفضيلات التعلم</h2><p>خيارات المتابعة والواجهة</p></div></div><div class="parent-field"><label for="dailyReminder">وقت التذكير اليومي</label><select id="dailyReminder"><option>06:00 مساءً</option><option>05:00 مساءً</option><option>07:00 مساءً</option></select></div><div class="parent-field"><label for="interfaceLanguage">لغة الواجهة</label><select id="interfaceLanguage"><option>العربية</option></select></div><div class="parent-setting-toggle"><div><strong>إظهار اقتراحات التعلم</strong><small>عرض أنشطة مناسبة لمستوى الطفل</small></div><label class="parent-switch"><input type="checkbox" checked><span></span></label></div><div class="parent-save-row"><button class="parent-save-btn" type="button" data-parent-save>حفظ التغييرات</button></div></article>
+ <article class="parent-settings-card"><div class="parent-settings-card__title"><i class="fa-solid fa-shield-halved"></i><div><h2>الخصوصية والأمان</h2><p>إعدادات حماية الحساب</p></div></div><div class="parent-setting-toggle"><div><strong>التحقق بخطوتين</strong><small>إضافة طبقة أمان إضافية للحساب</small></div><label class="parent-switch"><input type="checkbox"><span></span></label></div><div class="parent-setting-toggle"><div><strong>تنبيه عند تسجيل دخول جديد</strong><small>إرسال تنبيه عند استخدام جهاز جديد</small></div><label class="parent-switch"><input type="checkbox" checked><span></span></label></div><div class="parent-field" style="margin-top:14px"><label>كلمة المرور</label><input type="password" value="BloomKids123" readonly></div><div class="parent-save-row"><button class="parent-save-btn" type="button" data-parent-save>حفظ التغييرات</button></div></article>
+</section><div class="parent-settings-toast" id="parentSettingsToast">تم حفظ التغييرات بنجاح</div>
+</main></div><script src="js/parent-settings.js"></script>
+<a class="global-home-link" href="index.html" aria-label="العودة إلى الصفحة الرئيسية">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path><path d="M9.5 20v-5h5v5"></path></svg>
+  <span>العودة إلى الصفحة الرئيسية</span>
+</a>
+</body></html>
