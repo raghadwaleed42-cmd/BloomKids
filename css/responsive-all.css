@@ -1,0 +1,1330 @@
+/* =========================================================
+   Bloom Kids — universal responsive layer
+   Purpose: adapt the existing UI to tablets and phones
+   without changing desktop content, colors, or functionality.
+   ========================================================= */
+
+/* Safe flex/grid shrinking on every viewport. */
+.main-content,
+.main-area,
+.admin-main,
+.app > .main,
+.dashboard > main,
+.admin-shell > main {
+  min-width: 0;
+}
+
+
+.content-table-wrap,
+.table-wrapper,
+.activity-table-wrap {
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ---------- Small laptops / landscape tablets ---------- */
+@media (max-width: 1100px) {
+  img,
+  svg,
+  canvas,
+  video {
+    max-width: 100%;
+  }
+
+  .main-content,
+  .main-area,
+  .admin-main,
+  .app > .main {
+    min-width: 0 !important;
+  }
+
+  .top-header,
+  .topbar,
+  .admin-topbar {
+    max-width: 100%;
+  }
+
+  .content-management-card,
+  .teacher-form-card,
+  .teacher-settings-card,
+  .parent-panel,
+  .parent-settings-card,
+  .settings-card,
+  .panel,
+  .page-content {
+    max-width: 100%;
+  }
+
+  .content-table-wrap,
+  .table-wrapper,
+  .activity-table-wrap {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+
+  .teacher-content-form,
+  .teacher-preview-grid,
+  .teacher-settings-grid,
+  .teacher-security-grid,
+  .parent-dashboard-grid,
+  .parent-settings-grid {
+    min-width: 0;
+  }
+}
+
+/* ---------- Tablet layout: compact navigation rail ---------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Shared parent/student/teacher/progress sidebars. */
+  .dashboard,
+  .app {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .dashboard > .sidebar,
+  .app > .sidebar {
+    position: sticky !important;
+    top: 0 !important;
+    width: 88px !important;
+    min-width: 88px !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    padding: 20px 10px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    flex: 0 0 88px !important;
+  }
+
+  .dashboard > .sidebar .sidebar-logo,
+  .dashboard > .sidebar .logo-container,
+  .dashboard > .sidebar .brand,
+  .app > .sidebar .sidebar-logo,
+  .app > .sidebar .logo-container,
+  .app > .sidebar .brand {
+    justify-content: center !important;
+  }
+
+  .dashboard > .sidebar .logo-image,
+  .dashboard > .sidebar .brand-logo,
+  .app > .sidebar .logo-image,
+  .app > .sidebar .brand-logo {
+    width: 58px !important;
+    max-width: 58px !important;
+    height: 54px !important;
+    max-height: 54px !important;
+    margin: 0 auto 22px !important;
+    object-fit: contain !important;
+  }
+
+  .dashboard > .sidebar .sidebar-nav,
+  .dashboard > .sidebar .menu,
+  .app > .sidebar .sidebar-nav,
+  .app > .sidebar .menu {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 9px !important;
+    overflow: visible !important;
+  }
+
+  .dashboard > .sidebar .nav-item,
+  .dashboard > .sidebar .menu-item,
+  .app > .sidebar .nav-item,
+  .app > .sidebar .menu-item {
+    width: 54px !important;
+    min-width: 54px !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    border-radius: 13px !important;
+    overflow: hidden !important;
+  }
+
+  .dashboard > .sidebar .nav-item > span:not(.nav-icon),
+  .dashboard > .sidebar .menu-item > span,
+  .app > .sidebar .nav-item > span:not(.nav-icon),
+  .app > .sidebar .menu-item > span {
+    display: none !important;
+  }
+
+  .dashboard > .sidebar .nav-item > i,
+  .dashboard > .sidebar .nav-item > .nav-icon,
+  .dashboard > .sidebar .menu-item > i,
+  .dashboard > .sidebar .menu-item > svg,
+  .app > .sidebar .nav-item > i,
+  .app > .sidebar .nav-item > .nav-icon,
+  .app > .sidebar .menu-item > i,
+  .app > .sidebar .menu-item > svg {
+    order: 0 !important;
+    width: 24px !important;
+    min-width: 24px !important;
+    height: 24px !important;
+    flex: 0 0 24px !important;
+    margin: 0 !important;
+    font-size: 20px !important;
+  }
+
+  .main-content,
+  .main-area,
+  .app > .main {
+    padding: 18px !important;
+    min-width: 0 !important;
+  }
+
+  /* Admin rail. */
+  .admin-shell {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .admin-sidebar {
+    position: sticky;
+    top: 0;
+    width: 88px !important;
+    min-width: 88px !important;
+    height: 100vh;
+    min-height: 100vh !important;
+    padding: 20px 10px !important;
+    flex: 0 0 88px;
+    overflow-y: auto;
+  }
+
+  .admin-brand {
+    margin-bottom: 22px !important;
+  }
+
+  .admin-brand img {
+    width: 58px !important;
+    height: 54px !important;
+  }
+
+  .admin-nav {
+    align-items: center;
+    gap: 9px !important;
+  }
+
+  .admin-nav__item {
+    width: 54px !important;
+    min-width: 54px;
+    height: 50px !important;
+    padding: 0 !important;
+    justify-content: center !important;
+    gap: 0 !important;
+  }
+
+  .admin-nav__item span {
+    display: none !important;
+  }
+
+  .admin-nav__item i {
+    width: 24px !important;
+    min-width: 24px !important;
+    font-size: 20px !important;
+  }
+
+  .admin-main {
+    padding: 18px !important;
+    min-width: 0 !important;
+  }
+
+  .admin-topbar {
+    padding-inline: 18px !important;
+  }
+
+  .admin-user__info {
+    display: none !important;
+  }
+
+  /* Prevent wide tables from forcing the page wider than the viewport. */
+  .content-table,
+  .students-table {
+    min-width: 720px !important;
+  }
+}
+
+/* ---------- Phones + portrait tablets ---------- */
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  body {
+    min-width: 0 !important;
+  }
+
+  /* Global home control becomes part of the document flow on small screens,
+     so it never covers navigation or content. */
+  .global-home-link {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    z-index: 20 !important;
+    width: max-content;
+    max-width: calc(100% - 24px);
+    min-height: 40px !important;
+    margin: 10px 12px 0 auto;
+    padding: 0 12px !important;
+    font-size: 11px !important;
+  }
+
+  /* Shared dashboard shell becomes a stacked mobile layout. */
+  .dashboard,
+  .app,
+  .admin-shell {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 100vh !important;
+  }
+
+  .dashboard > .sidebar,
+  .app > .sidebar,
+  .admin-sidebar {
+    position: relative !important;
+    top: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 10px 12px 12px !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid #edf2f8 !important;
+    display: block !important;
+    overflow: hidden !important;
+  }
+
+  .dashboard > .sidebar .sidebar-logo,
+  .dashboard > .sidebar .logo-container,
+  .dashboard > .sidebar .brand,
+  .app > .sidebar .sidebar-logo,
+  .app > .sidebar .logo-container,
+  .app > .sidebar .brand,
+  .admin-brand {
+    width: 100% !important;
+    height: 52px !important;
+    margin: 0 0 8px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .dashboard > .sidebar .logo-image,
+  .dashboard > .sidebar .brand-logo,
+  .app > .sidebar .logo-image,
+  .app > .sidebar .brand-logo,
+  .admin-brand img {
+    width: 54px !important;
+    max-width: 54px !important;
+    height: 48px !important;
+    max-height: 48px !important;
+    margin: 0 !important;
+    object-fit: contain !important;
+  }
+
+  .dashboard > .sidebar .sidebar-nav,
+  .dashboard > .sidebar .menu,
+  .app > .sidebar .sidebar-nav,
+  .app > .sidebar .menu,
+  .admin-nav {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 0 !important;
+    padding: 2px 0 5px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline proximity;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dashboard > .sidebar .nav-item,
+  .dashboard > .sidebar .menu-item,
+  .app > .sidebar .nav-item,
+  .app > .sidebar .menu-item,
+  .admin-nav__item {
+    width: auto !important;
+    min-width: max-content !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    padding: 0 12px !important;
+    border-radius: 11px !important;
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    font-size: 13px !important;
+    white-space: nowrap !important;
+    scroll-snap-align: start;
+  }
+
+  .dashboard > .sidebar .nav-item > span:not(.nav-icon),
+  .dashboard > .sidebar .menu-item > span,
+  .app > .sidebar .nav-item > span:not(.nav-icon),
+  .app > .sidebar .menu-item > span,
+  .admin-nav__item span {
+    display: inline !important;
+    order: 0 !important;
+  }
+
+  .dashboard > .sidebar .nav-item > i,
+  .dashboard > .sidebar .nav-item > .nav-icon,
+  .dashboard > .sidebar .menu-item > i,
+  .dashboard > .sidebar .menu-item > svg,
+  .app > .sidebar .nav-item > i,
+  .app > .sidebar .nav-item > .nav-icon,
+  .app > .sidebar .menu-item > i,
+  .app > .sidebar .menu-item > svg,
+  .admin-nav__item i {
+    order: -1 !important;
+    width: 20px !important;
+    min-width: 20px !important;
+    height: 20px !important;
+    flex: 0 0 20px !important;
+    margin: 0 !important;
+    font-size: 17px !important;
+  }
+
+  .main-content,
+  .main-area,
+  .app > .main,
+  .admin-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 12px !important;
+    overflow: visible !important;
+  }
+
+  /* Headers stay compact and readable. */
+  .top-header,
+  .topbar,
+  .topbar.top-header,
+  .admin-topbar {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 68px !important;
+    margin-bottom: 14px !important;
+    padding: 12px 14px !important;
+    border-radius: 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+  }
+
+  .welcome-box,
+  .topbar .welcome,
+  .admin-welcome {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+
+  .welcome-box h1,
+  .welcome-box h2,
+  .topbar .welcome h1,
+  .admin-welcome h1 {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+  }
+
+  .welcome-box p,
+  .topbar .welcome p,
+  .admin-welcome p {
+    display: none !important;
+  }
+
+  .header-user,
+  .user-box,
+  .topbar .profile-wrap,
+  .admin-user {
+    min-width: 0 !important;
+    flex: 0 0 auto !important;
+    gap: 7px !important;
+  }
+
+  .header-user-info,
+  .user-info,
+  .topbar .profile-text,
+  .admin-user__info,
+  .header-arrow,
+  .dropdown-button,
+  .dropdown-icon,
+  .admin-user__arrow {
+    display: none !important;
+  }
+
+  .header-notification,
+  .notification-button,
+  .notification-icon,
+  .topbar .bell-box,
+  .admin-user__bell,
+  .header-avatar,
+  .small-avatar,
+  .user-icon,
+  .topbar .avatar-button,
+  .admin-user__avatar {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+  }
+
+  /* Student / parent content. */
+  .page-content,
+  .child-learning-content,
+  .subjects-content,
+  .lessons-content,
+  .single-lesson-content,
+  .activity-content,
+  .level-test-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .page-content,
+  .parent-panel,
+  .parent-settings-card,
+  .teacher-form-card,
+  .teacher-settings-card,
+  .content-management-card,
+  .settings-card,
+  .panel,
+  .question-card,
+  .info-card,
+  .lesson-info-card {
+    padding: 16px !important;
+  }
+
+  .parent-summary-grid,
+  .subjects-grid,
+  .learning-cards,
+  .skills-container,
+  .profile-form,
+  .phone-row,
+  .lesson-side-info,
+  .activity-info,
+  .answers-grid,
+  .test-card,
+  .teacher-content-form,
+  .teacher-preview-grid,
+  .teacher-settings-grid,
+  .teacher-security-grid,
+  .settings-grid,
+  .format-row,
+  .logo-actions {
+    grid-template-columns: 1fr !important;
+  }
+
+  .parent-dashboard-grid,
+  .parent-settings-grid,
+  .lessons-layout,
+  .single-lesson-layout,
+  .activity-layout,
+  .charts-section,
+  .bottom-section,
+  .dashboard-grid--top,
+  .dashboard-grid--bottom {
+    grid-template-columns: 1fr !important;
+  }
+
+  .parent-page-heading,
+  .subjects-heading,
+  .lessons-heading,
+  .single-lesson-heading,
+  .activity-top,
+  .teacher-settings-heading,
+  .teacher-form-head,
+  .content-management-head,
+  .child-path-banner {
+    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .parent-page-heading h1,
+  .page-title,
+  .subjects-heading h1,
+  .lessons-title h1,
+  .single-lesson-title h1,
+  .activity-heading h1,
+  .teacher-page-title,
+  .teacher-form-head h1,
+  .content-management-head h1,
+  .settings-intro h1 {
+    font-size: 22px !important;
+    line-height: 1.45 !important;
+  }
+
+  .child-path-banner {
+    min-height: 0 !important;
+    padding: 20px 16px !important;
+  }
+
+  .child-path-text h1 {
+    font-size: 24px !important;
+  }
+
+  .level-badge {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .learning-card {
+    min-height: 0 !important;
+    padding: 18px !important;
+    align-items: center !important;
+  }
+
+  .learning-card-image img {
+    width: 88px !important;
+    height: 88px !important;
+  }
+
+  .subject-image,
+  .lesson-subject-image {
+    height: 160px !important;
+  }
+
+  .subjects-reminder,
+  .lessons-reminder {
+    min-height: 220px !important;
+    padding: 20px 18px 132px !important;
+    text-align: center !important;
+  }
+
+  .reminder-decoration,
+  .lessons-reminder-decoration {
+    display: none !important;
+  }
+
+  .reminder-robot,
+  .lessons-reminder-robot {
+    right: 50% !important;
+    left: auto !important;
+    transform: translateX(50%) !important;
+  }
+
+  .lesson-video {
+    min-height: 220px !important;
+  }
+
+  .lesson-tabs {
+    grid-template-columns: 1fr !important;
+  }
+
+  .lesson-motivation-card,
+  .robot-card {
+    align-items: center !important;
+  }
+
+  .lesson-navigation,
+  .question-navigation,
+  .bottom-actions,
+  .teacher-form-actions {
+    flex-wrap: wrap !important;
+  }
+
+  .lesson-navigation-btn,
+  .question-nav-btn,
+  .teacher-form-submit,
+  .teacher-form-cancel {
+    flex: 1 1 140px;
+  }
+
+  .math-question {
+    font-size: 30px !important;
+  }
+
+  .test-card {
+    width: 100% !important;
+    padding: 18px !important;
+    gap: 18px !important;
+  }
+
+  /* Parent dashboard details. */
+  .parent-summary-card {
+    min-width: 0 !important;
+  }
+
+  .child-overview {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  .quick-actions {
+    grid-template-columns: 1fr !important;
+  }
+
+  .subject-progress-row {
+    grid-template-columns: minmax(72px, 90px) minmax(0, 1fr) 38px !important;
+    gap: 8px !important;
+  }
+
+  /* Teacher pages and tables. */
+  .content-management-card {
+    min-height: 0 !important;
+  }
+
+  .content-actions {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 9px !important;
+  }
+
+  .content-action-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .content-table,
+  .students-table,
+  .activity-table {
+    min-width: 680px !important;
+  }
+
+  .content-pagination {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  .teacher-settings-save {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .teacher-setting-row,
+  .parent-setting-toggle,
+  .setting-row {
+    min-width: 0 !important;
+    gap: 12px !important;
+  }
+
+  .teacher-setting-info,
+  .parent-setting-toggle > div,
+  .setting-row > div {
+    min-width: 0 !important;
+  }
+
+  .teacher-select,
+  .select-wrap,
+  .select-wrap select,
+  .teacher-field,
+  .parent-field,
+  .parent-field input,
+  .parent-field select {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .teacher-form-actions {
+    grid-column: auto !important;
+  }
+
+  /* Admin pages. */
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .stat-card {
+    min-width: 0 !important;
+  }
+
+  .admin-main--settings,
+  .settings-intro,
+  .settings-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .settings-card {
+    min-height: 0 !important;
+    margin-inline: 0 !important;
+  }
+
+  /* Auth pages: preserve the existing single-column concept, improve fit. */
+  .auth-layout,
+  .recovery-page .auth-layout {
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .auth-page .visual-side {
+    display: none !important;
+  }
+
+  .form-side,
+  .recovery-page .form-side {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 100svh !important;
+    padding: 32px 18px !important;
+  }
+
+  .form-box,
+  .recovery-card,
+  .reset-password-page .recovery-card {
+    width: min(100%, 520px) !important;
+    max-width: 100% !important;
+  }
+
+  .auth-page .page-title,
+  .register-page .page-title {
+    font-size: clamp(30px, 8vw, 38px) !important;
+  }
+
+  .auth-page .field,
+  .auth-page .main-button,
+  .auth-page input,
+  .auth-page select {
+    max-width: 100% !important;
+  }
+
+  .otp-row {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .otp-input {
+    width: clamp(38px, 11vw, 48px) !important;
+    height: clamp(44px, 12vw, 52px) !important;
+  }
+
+  /* Landing page: prevent decorative layers from creating accidental overflow. */
+  .site-header,
+  .navbar,
+  .hero,
+  .hero-inner,
+  .section-container,
+  .how-section,
+  .features-section,
+  .growth-section,
+  .site-footer {
+    max-width: 100%;
+  }
+
+  .hero-lines,
+  .growth-visual,
+  .student-shape,
+  .hero-picture {
+    max-width: 100%;
+  }
+}
+
+/* ---------- Narrow phones ---------- */
+@media (max-width: 480px) {
+  .main-content,
+  .main-area,
+  .app > .main,
+  .admin-main {
+    padding: 10px !important;
+  }
+
+  .dashboard > .sidebar,
+  .app > .sidebar,
+  .admin-sidebar {
+    padding-inline: 10px !important;
+  }
+
+  .top-header,
+  .topbar,
+  .topbar.top-header,
+  .admin-topbar {
+    min-height: 64px !important;
+    padding: 10px 12px !important;
+  }
+
+  .header-notification,
+  .notification-button,
+  .notification-icon,
+  .topbar .bell-box,
+  .admin-user__bell,
+  .header-avatar,
+  .small-avatar,
+  .user-icon,
+  .topbar .avatar-button,
+  .admin-user__avatar {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+  }
+
+  .parent-summary-grid,
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .parent-summary-card,
+  .stat-card {
+    min-height: 76px !important;
+  }
+
+  .profile-summary {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+
+  .profile-avatar {
+    margin-inline: auto;
+  }
+
+  .profile-summary .edit-button {
+    width: 100%;
+  }
+
+  .learning-card,
+  .lesson-motivation-card,
+  .robot-card {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .subject-card-footer {
+    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .subject-card-footer button {
+    width: 100% !important;
+  }
+
+  .subject-progress-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .subject-progress-row .track {
+    width: 100%;
+  }
+
+  .teacher-setting-row,
+  .parent-setting-toggle,
+  .setting-row {
+    align-items: flex-start !important;
+    flex-wrap: wrap !important;
+  }
+
+  .teacher-switch,
+  .parent-switch,
+  .switch {
+    flex: 0 0 auto !important;
+  }
+
+  .content-table,
+  .students-table,
+  .activity-table {
+    min-width: 620px !important;
+  }
+
+  .form-side,
+  .recovery-page .form-side {
+    padding: 26px 14px !important;
+  }
+
+  .recovery-card {
+    padding: 24px 16px !important;
+  }
+
+  .phone-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .country-select,
+  .country-code {
+    width: 100% !important;
+  }
+
+  .lesson-tabs {
+    gap: 5px !important;
+  }
+
+  .lesson-tab,
+  .tab-btn {
+    font-size: 13px !important;
+  }
+
+  .dashboard-message,
+  .parent-settings-toast,
+  .teacher-settings-toast,
+  .teacher-form-toast {
+    left: 10px !important;
+    right: 10px !important;
+    bottom: 10px !important;
+    width: auto !important;
+    max-width: none !important;
+    text-align: center;
+  }
+}
+
+/* Final overflow guard for data-heavy dashboard cards. */
+@media (max-width: 768px) {
+  .dashboard-grid,
+  .dashboard-grid--top,
+  .dashboard-grid--bottom,
+  .panel,
+  .panel--activity,
+  .panel--performance,
+  .activity-table-wrap,
+  .content-table-wrap,
+  .table-wrapper {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+}
+
+/* =========================================================
+   Mobile + foldable hardening (final pass)
+   Keeps desktop/tablet styling intact while removing mobile
+   intrinsic-width clipping and making navigation wrap cleanly.
+   ========================================================= */
+@media (max-width: 768px) {
+  /* Landing: grid children must be allowed to shrink below desktop min-content. */
+  .hero-inner {
+    width: 100% !important;
+    max-width: calc(100% - 28px) !important;
+    min-width: 0 !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    justify-items: stretch !important;
+  }
+
+  .hero-inner > *,
+  .hero-content,
+  .hero-picture {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .hero-content {
+    padding-inline: 0 !important;
+    overflow: visible !important;
+  }
+
+  .hero-content h1,
+  .hero-content p {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-wrap: break-word;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(28px, 8.8vw, 36px) !important;
+    line-height: 1.38 !important;
+    letter-spacing: 0 !important;
+  }
+
+  .hero-content p {
+    margin-inline: auto !important;
+    font-size: clamp(13px, 3.8vw, 15px) !important;
+    line-height: 1.9 !important;
+  }
+
+  .hero-content .primary-button {
+    width: min(230px, 100%) !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-picture {
+    overflow: hidden !important;
+  }
+
+  .hero-picture img {
+    width: min(355px, 96vw) !important;
+    max-width: 96vw !important;
+  }
+
+  .student-shape {
+    width: min(300px, 82vw) !important;
+    max-width: 82vw !important;
+  }
+
+  /* Landing sections: later polish rules must not restore desktop grids. */
+  .footer-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px !important;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .footer-about p,
+  .footer-brand {
+    max-width: 100% !important;
+    margin-inline: auto !important;
+  }
+
+  .growth-section {
+    overflow: hidden !important;
+  }
+
+  .growth-text,
+  .growth-text h2,
+  .growth-text p {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .side-notch {
+    display: none !important;
+  }
+
+  /* Dashboard navigation: wrap instead of pushing half the menu off-screen. */
+  .dashboard > .sidebar .sidebar-nav,
+  .dashboard > .sidebar .menu,
+  .app > .sidebar .sidebar-nav,
+  .app > .sidebar .menu,
+  .admin-nav {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+    overflow: visible !important;
+    padding: 2px 0 5px !important;
+  }
+
+  .dashboard > .sidebar .nav-item,
+  .dashboard > .sidebar .menu-item,
+  .app > .sidebar .nav-item,
+  .app > .sidebar .menu-item,
+  .admin-nav__item {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 44px !important;
+    padding: 8px 7px !important;
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Wide data tables remain usable through their own horizontal scroller. */
+  .content-table-wrap,
+  .table-wrapper,
+  .activity-table-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    direction: rtl;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-inner {
+    max-width: calc(100% - 24px) !important;
+  }
+
+  .hero {
+    min-height: 0 !important;
+    padding-top: 112px !important;
+    padding-bottom: 108px !important;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(25px, 8.6vw, 31px) !important;
+  }
+
+  .hero-picture {
+    min-height: clamp(360px, 112vw, 455px) !important;
+  }
+
+  .hero-picture img {
+    width: min(330px, 94vw) !important;
+    height: auto !important;
+    max-height: 455px !important;
+    object-fit: contain !important;
+  }
+
+  .student-shape {
+    width: min(280px, 80vw) !important;
+    height: clamp(315px, 96vw, 370px) !important;
+  }
+
+  .growth-section {
+    padding-inline: 16px !important;
+  }
+
+  .growth-text h2 {
+    font-size: clamp(24px, 8vw, 30px) !important;
+  }
+
+  .growth-visual {
+    right: auto !important;
+    left: auto !important;
+    width: min(360px, 100%) !important;
+    max-width: 100% !important;
+    height: min(360px, calc(100vw - 32px)) !important;
+    margin-inline: auto !important;
+    transform: none !important;
+  }
+
+  .growth-visual .orbit-one {
+    width: 92% !important;
+    height: 92% !important;
+    border-width: clamp(28px, 10vw, 46px) !important;
+  }
+
+  .growth-visual .orbit-two {
+    width: 66% !important;
+    height: 66% !important;
+    border-width: clamp(28px, 10vw, 46px) !important;
+  }
+
+  .growth-visual .orbit-three {
+    width: 40% !important;
+    height: 40% !important;
+  }
+
+  .growth-visual strong {
+    width: 42% !important;
+    font-size: clamp(13px, 4vw, 18px) !important;
+  }
+
+  .dashboard > .sidebar .sidebar-nav,
+  .dashboard > .sidebar .menu,
+  .app > .sidebar .sidebar-nav,
+  .app > .sidebar .menu,
+  .admin-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .dashboard > .sidebar .nav-item,
+  .dashboard > .sidebar .menu-item,
+  .app > .sidebar .nav-item,
+  .app > .sidebar .menu-item,
+  .admin-nav__item {
+    font-size: 12px !important;
+  }
+
+  .section-container,
+  .navbar {
+    max-width: calc(100% - 20px) !important;
+  }
+
+  .contact-strip,
+  .feature-card,
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    border-radius: 16px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-content h1 {
+    font-size: 24px !important;
+  }
+
+  .hero-content p {
+    font-size: 12.5px !important;
+  }
+
+  .hero-content .primary-button {
+    height: 50px !important;
+    font-size: 15px !important;
+  }
+
+  .dashboard > .sidebar .sidebar-nav,
+  .dashboard > .sidebar .menu,
+  .app > .sidebar .sidebar-nav,
+  .app > .sidebar .menu,
+  .admin-nav {
+    gap: 6px !important;
+  }
+
+  .dashboard > .sidebar .nav-item,
+  .dashboard > .sidebar .menu-item,
+  .app > .sidebar .nav-item,
+  .app > .sidebar .menu-item,
+  .admin-nav__item {
+    padding-inline: 5px !important;
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Progress/profile dropdown opens fully inside narrow viewports. */
+  .profile-dropdown {
+    right: 0 !important;
+    left: auto !important;
+    width: min(245px, calc(100vw - 24px)) !important;
+    max-width: calc(100vw - 24px) !important;
+  }
+}
+
+
+/* Mobile landing hero: keep the illustration centered on phones/foldables.
+   The original float animation changes transform, so the centering transform
+   has to be part of the mobile animation itself. */
+@keyframes heroStudentFloatMobile {
+  from { transform: translateX(-50%) translateY(0); }
+  to   { transform: translateX(-50%) translateY(-7px); }
+}
+
+@media (max-width: 768px) {
+  .hero-picture {
+    overflow: visible !important;
+  }
+
+  .student-shape {
+    right: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .hero-picture img {
+    right: auto !important;
+    left: 50% !important;
+    width: min(330px, 88vw) !important;
+    max-width: 88vw !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+    transform: translateX(-50%) !important;
+    animation: heroStudentFloatMobile 5.5s ease-in-out 1.05s infinite alternate !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-picture img {
+    width: min(300px, 88vw) !important;
+  }
+}
