@@ -26,7 +26,7 @@
 <aside class="sidebar">
 <!-- Logo -->
 <div class="logo-container">
-<img alt="Bloom Kids Logo" class="logo-image" src="images/bloomkids-logo-mark.png"/>
+<img alt="Bloom Kids Logo" class="logo-image" src="images/bloomkids-logo-navy.png"/>
 </div>
 <!-- Navigation -->
 <nav class="sidebar-nav">
@@ -169,6 +169,20 @@
                         </span>
 </button>
 </div>
+<!-- ========================================= -->
+<!-- Children management -->
+<!-- ========================================= -->
+<div class="children-manager" aria-labelledby="childrenManagerTitle">
+<div class="children-manager__copy">
+<h3 id="childrenManagerTitle">بيانات الأطفال</h3>
+<p>يمكن ربط أكثر من طفل بنفس حساب ولي الأمر ومتابعة كل طفل بشكل مستقل.</p>
+</div>
+<button class="add-child-button" id="addChildButton" type="button">
+<i class="fa-solid fa-plus" aria-hidden="true"></i>
+<span>إضافة طفل آخر</span>
+</button>
+</div>
+<div class="children-tabs" id="childrenTabs" aria-label="الأطفال المرتبطون بالحساب"></div>
 <!-- ========================================= -->
 <!-- Form -->
 <!-- ========================================= -->
@@ -316,8 +330,39 @@
 </section>
 </main>
 </div>
+
+<!-- Add child dialog -->
+<div class="child-modal" id="childModal" aria-hidden="true">
+<div class="child-modal__backdrop" data-close-child-modal></div>
+<section class="child-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="childModalTitle">
+<button class="child-modal__close" type="button" data-close-child-modal aria-label="إغلاق نافذة إضافة طفل">
+<i class="fa-solid fa-xmark" aria-hidden="true"></i>
+</button>
+<div class="child-modal__icon" aria-hidden="true"><i class="fa-solid fa-child-reaching"></i></div>
+<h2 id="childModalTitle">إضافة طفل آخر</h2>
+<p>سيتم ربط الطفل بنفس حساب ولي الأمر حتى تتمكن من متابعة مساره ونتائجه بشكل مستقل.</p>
+<form id="addChildForm">
+<div class="child-modal__grid">
+<label>اسم الطفل<input id="newChildName" type="text" placeholder="اسم الطفل" required></label>
+<label>العمر<input id="newChildAge" type="number" min="5" max="15" placeholder="العمر" required></label>
+<label>الصف الدراسي<input id="newChildGrade" type="text" placeholder="مثال: الصف الثالث" required></label>
+<label>الهدف التعليمي<input id="newChildGoal" type="text" placeholder="مثال: تقوية المهارات الأساسية" required></label>
+</div>
+<div class="child-modal__actions">
+<button class="child-modal__cancel" type="button" data-close-child-modal>إلغاء</button>
+<button class="child-modal__save" type="submit"><i class="fa-solid fa-plus" aria-hidden="true"></i> إضافة الطفل</button>
+</div>
+</form>
+</section>
+</div>
 <!-- JavaScript -->
 <script src="js/student-dashboard.js"></script>
 <script src="js/parent-profile.js"></script>
+
+<a class="global-home-link" href="index.html" aria-label="العودة إلى الصفحة الرئيسية">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path><path d="M9.5 20v-5h5v5"></path></svg>
+  <span>العودة إلى الصفحة الرئيسية</span>
+</a>
+  <script src="js/dashboard-navigation.js"></script>
 </body>
 </html>

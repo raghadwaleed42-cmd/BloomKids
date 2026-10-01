@@ -17,10 +17,11 @@
   <div class="admin-shell">
     <aside class="admin-sidebar">
       <a class="admin-brand" href="admin-dashboard.html" aria-label="Bloom Kids">
-        <img src="images/bloomkids-logo-mark.png" alt="Bloom Kids">
+        <img src="images/bloomkids-logo-navy.png" alt="Bloom Kids">
       </a>
       <nav class="admin-nav" aria-label="قائمة مدير النظام">
         <a href="admin-dashboard.html" class="admin-nav__item"><i class="fa-solid fa-house"></i><span>لوحة التحكم</span></a>
+        <a href="admin-roles.html" class="admin-nav__item"><i class="fa-solid fa-user-shield"></i><span>الأدوار والصلاحيات</span></a>
         <a href="admin-settings.html" class="admin-nav__item active" aria-current="page"><i class="fa-solid fa-gear"></i><span>الإعدادات</span></a>
         <a href="login.html" class="admin-nav__item admin-nav__logout"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>تسجيل خروج</span></a>
       </nav>
@@ -45,7 +46,7 @@
       <section class="settings-grid">
         <article class="settings-card identity-card">
           <header class="settings-card__head"><div class="settings-card__title"><i class="fa-regular fa-image" aria-hidden="true"></i><div><h2>الهوية والشعار</h2><p>تخصيص هوية المنصة والشعار</p></div></div></header>
-          <div class="logo-preview"><img id="adminLogoPreview" src="images/bloomkids-logo-mark.png" alt="شعار Bloom Kids"></div>
+          <div class="logo-preview"><img id="adminLogoPreview" src="images/bloomkids-logo-navy.png" alt="شعار Bloom Kids"></div>
           <div class="logo-actions">
             <label class="btn btn--primary" for="adminLogoInput">تعديل الشعار</label>
             <button class="btn btn--secondary" type="button" id="removeAdminLogo">إزالة الشعار</button>
@@ -91,5 +92,11 @@
     </main>
   </div>
   <script src="js/admin-settings.js"></script>
+
+<a class="global-home-link" href="index.html" aria-label="العودة إلى الصفحة الرئيسية">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path><path d="M9.5 20v-5h5v5"></path></svg>
+  <span>العودة إلى الصفحة الرئيسية</span>
+</a>
+  <script src="js/dashboard-navigation.js"></script>
 </body>
 </html>

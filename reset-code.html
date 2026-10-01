@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Kids | تأكيد رمز إعادة التعيين</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/global-ui.css">
+    <link rel="stylesheet" href="css/responsive-all.css">
+</head>
+<body class="auth-page recovery-split-page reset-code-page">
+    <main class="auth-layout">
+        <section class="form-side">
+            <div class="recovery-form-box">
+                <div class="recovery-heading-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                </div>
+                <p class="small-label">تأكيد الهوية</p>
+                <h1 class="recovery-split-title">أدخل رمز التحقق</h1>
+                <p class="recovery-split-text">أرسلنا رمزًا مكونًا من 6 أرقام إلى بريدك الإلكتروني. أدخل الرمز للمتابعة.</p>
+                <span class="sent-email reset-code-email" id="resetCodeEmail">example@email.com</span>
+
+                <form id="resetCodeForm" novalidate>
+                    <div class="otp-row otp-row--six" aria-label="رمز التحقق">
+                        <input class="otp-input" type="text" maxlength="1" inputmode="numeric" autocomplete="one-time-code" aria-label="الرقم الأول">
+                        <input class="otp-input" type="text" maxlength="1" inputmode="numeric" aria-label="الرقم الثاني">
+                        <input class="otp-input" type="text" maxlength="1" inputmode="numeric" aria-label="الرقم الثالث">
+                        <input class="otp-input" type="text" maxlength="1" inputmode="numeric" aria-label="الرقم الرابع">
+                        <input class="otp-input" type="text" maxlength="1" inputmode="numeric" aria-label="الرقم الخامس">
+                        <input class="otp-input" type="text" maxlength="1" inputmode="numeric" aria-label="الرقم السادس">
+                    </div>
+                    <p class="otp-error" id="resetCodeError" role="alert">أدخل رمز التحقق كاملًا</p>
+                    <button class="main-button" type="submit">تأكيد الرمز</button>
+                </form>
+
+                <p class="resend-row">لم يصلك الرمز؟ <button class="text-button" id="resendResetCode" type="button">إعادة الإرسال</button> <span class="resend-timer" id="resendTimer"></span></p>
+                <a class="return-link" href="forgot-password.html">تغيير البريد الإلكتروني</a>
+            </div>
+        </section>
+
+        <section class="visual-side" aria-label="بيئة تعليمية تفاعلية للأطفال">
+            <img class="visual-logo" src="images/bloomkids-logo-white.png" alt="Bloom Kids">
+            <div class="visual-accent-dot" aria-hidden="true"></div>
+            <div class="visual-content">
+                <div class="visual-image-wrap">
+                    <img class="visual-image" src="images/auth-learning-photo.png" alt="معلمة وأطفال يتعلمون باستخدام جهاز لوحي">
+                    <span class="image-caption">حماية بسيطة لرحلة تعليمية مستمرة</span>
+                </div>
+                <div class="visual-copy">
+                    <p class="gold-line">خطوة أمان واحدة</p>
+                    <h2>تأكيد الرمز ثم كلمة مرور جديدة</h2>
+                    <p>نتأكد أولًا من البريد المرتبط بالحساب قبل السماح بتغيير كلمة المرور.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/reset-code.js"></script>
+
+    <a class="global-home-link" href="index.html" aria-label="العودة إلى الصفحة الرئيسية">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path><path d="M9.5 20v-5h5v5"></path></svg>
+      <span>العودة إلى الصفحة الرئيسية</span>
+    </a>
+</body>
+</html>
