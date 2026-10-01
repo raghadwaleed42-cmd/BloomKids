@@ -1015,3 +1015,200 @@ button:focus-visible {
 @media (max-width: 950px) {
     .auth-page .visual-logo { display: none !important; }
 }
+
+/* ===== Final Bloom Kids brand + password recovery flow ===== */
+.auth-page .visual-logo {
+    filter: none !important;
+    object-fit: contain;
+}
+
+.recovery-split-page .auth-layout {
+    grid-template-columns: 1fr 1fr;
+}
+
+.recovery-split-page .form-side {
+    padding: 52px 56px;
+    background: #ffffff;
+}
+
+.recovery-form-box {
+    width: 460px;
+    max-width: 100%;
+    margin-inline: auto;
+    text-align: right;
+}
+
+.recovery-heading-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    margin: 0 0 18px auto;
+    padding: 10px;
+    border: 1px solid #dce7f2;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #1d5f98;
+    box-shadow: 0 5px 16px rgba(15, 76, 129, .06);
+}
+
+.recovery-heading-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.recovery-split-page .small-label {
+    margin-bottom: 10px;
+    color: #215d91;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.recovery-split-title {
+    margin: 0 0 12px;
+    color: #0f4c81;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.recovery-split-text {
+    max-width: 430px;
+    margin: 0 0 28px;
+    color: #71849b;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.recovery-split-page .field {
+    margin-bottom: 18px;
+}
+
+.recovery-split-page .field input {
+    height: 50px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.recovery-split-page .field-icon {
+    top: 14px;
+    width: 20px;
+    height: 20px;
+}
+
+.recovery-split-page .main-button {
+    height: 52px;
+    margin-top: 2px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.recovery-split-page .return-link {
+    display: block;
+    width: max-content;
+    margin: 18px auto 0;
+    color: #527391;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.recovery-split-page .visual-side {
+    background: #0c385c;
+}
+
+.recovery-split-page .visual-content {
+    width: 470px;
+    transform: none;
+}
+
+.recovery-split-page .visual-image {
+    border-radius: 20px;
+}
+
+.recovery-split-page .visual-copy .gold-line {
+    margin-top: 28px;
+}
+
+.reset-code-page .reset-code-email {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 0 20px auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.reset-code-page .otp-row--six {
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 2px 0 17px;
+}
+
+.reset-code-page .otp-input {
+    width: 48px;
+    height: 50px;
+    border-radius: 9px;
+    font-size: 20px;
+}
+
+.reset-code-page .otp-error {
+    text-align: right;
+    margin-top: -7px;
+}
+
+.reset-code-page .resend-row {
+    margin-top: 16px;
+    text-align: right;
+    font-size: 12px;
+}
+
+.resend-timer {
+    color: #8fa0b2;
+    font-size: 11px;
+}
+
+@media (max-width: 950px) {
+    .recovery-split-page .auth-layout {
+        grid-template-columns: 1fr;
+    }
+    .recovery-split-page .form-side {
+        min-height: 100vh;
+        padding: 56px 24px 42px;
+    }
+    .recovery-split-page .visual-side {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .recovery-split-title {
+        font-size: 30px;
+    }
+    .recovery-split-text {
+        font-size: 13px;
+    }
+    .reset-code-page .otp-row--six {
+        gap: 6px;
+    }
+    .reset-code-page .otp-input {
+        width: 41px;
+        height: 46px;
+        font-size: 18px;
+    }
+}
+
+/* Keep the full logo present but visually balanced in the auth hero. */
+.auth-page .visual-logo {
+    width: 96px !important;
+    max-width: 16% !important;
+    top: 24px !important;
+    right: 30px !important;
+}
