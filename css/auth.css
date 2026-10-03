@@ -1212,3 +1212,13 @@ button:focus-visible {
     top: 24px !important;
     right: 30px !important;
 }
+
+/* ===== Requested polish: Login hero logo alignment ===== */
+/* Keep the login logo tucked neatly into the hero corner without changing
+   the registration page or the rest of the authentication layout. */
+.login-page .visual-logo {
+    width: 92px !important;
+    max-width: 15% !important;
+    top: 14px !important;
+    right: 30px !important;
+}
