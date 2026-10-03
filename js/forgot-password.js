@@ -15,7 +15,8 @@ forgotForm.addEventListener("submit", function (event) {
     }
 
     sessionStorage.setItem("resetEmail", emailInput.value.trim());
-    window.location.href = "reset-link-sent.html";
+    sessionStorage.removeItem("resetCodeVerified");
+    window.location.href = "reset-code.html";
 });
 
 emailInput.addEventListener("input", function () {

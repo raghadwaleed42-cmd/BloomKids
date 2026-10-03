@@ -22,6 +22,8 @@
     confirmField.classList.toggle('has-error', !confirm.value || confirm.value !== pass.value);
     if (pass.value.length < 6 || confirm.value !== pass.value) return;
     message.classList.add('show');
+    sessionStorage.removeItem('resetCodeVerified');
+    sessionStorage.removeItem('resetEmail');
     setTimeout(() => { window.location.href = 'login.html'; }, 650);
   });
 })();
